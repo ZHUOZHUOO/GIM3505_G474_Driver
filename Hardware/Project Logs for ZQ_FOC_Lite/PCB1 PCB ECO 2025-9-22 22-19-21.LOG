@@ -1,0 +1,13 @@
+Change Component Designator: OldDesignator=LED1 NewDesignator=LED2
+Change Component Designator: OldDesignator=R5 NewDesignator=R20
+Added Component: Designator=LED1(led0805)
+Added Component: Designator=R5(R0402)
+Add component (AddParameter): Name = "W"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=PGND Pin=LED1-2
+Added Pin To Net: NetName=3V3 Pin=R5-1
+Change Net Name : Old Net Name=NetLED1_1 New Net Name=NetLED2_1
+Added Pin To Net: NetName=NetLED1_1 Pin=LED1-1
+Added Pin To Net: NetName=NetLED1_1 Pin=R5-2
+Added Net: Name=NetLED1_1
+Added Member To Class: ClassName=Sheet1 Member=Component LED2 LED
+Added Member To Class: ClassName=Sheet1 Member=Component R20 2K¦¸

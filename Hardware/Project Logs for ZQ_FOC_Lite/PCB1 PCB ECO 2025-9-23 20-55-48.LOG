@@ -1,0 +1,4 @@
+Removed Pin From Net: NetName=PGND Pin=H1-7
+Removed Pin From Net: NetName=PGND Pin=H1-8
+Removed Pin From Net: NetName=PGND Pin=LED1-2
+Added Pin To Net: NetName=DGND Pin=LED1-2
