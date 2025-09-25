@@ -1,7 +1,0 @@
-Removed Pin From Net: NetName=SW_Bit0 Pin=U4-42
-Removed Pin From Net: NetName=SW_Bit2 Pin=U4-44
-Added Pin To Net: NetName=SW_Bit2 Pin=U4-42
-Added Pin To Net: NetName=SW_Bit0 Pin=U4-44
-Added Member To Class: ClassName=Sheet1 Member=Component C24 0.1uF
-Added Member To Class: ClassName=Sheet1 Member=Component LED1 LED
-Added Member To Class: ClassName=Sheet1 Member=Component R5 2K¦¸
