@@ -13,11 +13,10 @@ extern "C"
 
 	
 #define ADC1_CHANNEL_NUM  6
-
+	
+//---ADC REGULAR_MODE_CH---//
 #define ADC1_REGULAR_MODE_CH 3
-#define ADC1_INJECTED_MODE_CH 3
-
-//ADC REGULAR_MODE_CH
+	
 #if 	THREE_PHASE_LINE_SEQUENCCE == A_B_C
 	#define CURRENT_A_ADC_CHANNEL  0
 	#define CURRENT_B_ADC_CHANNEL  1
@@ -27,11 +26,17 @@ extern "C"
 	#define CURRENT_B_ADC_CHANNEL  2
 	#define CURRENT_C_ADC_CHANNEL  1
 #endif
+//---ADC REGULAR_MODE_CH---//
 
-//ADC INJECTED_MODE_CH
+
+//---ADC INJECTED_MODE_CH---//
+#define ADC1_INJECTED_MODE_CH 4
+
 #define VCC_ADC_CHANNEL  3
-#define TEMP_ADC_CHANNEL  4
-#define VREF_ADC_CHANNEL  5
+#define NTC_ADC_CHANNEL		4
+#define TEMP_ADC_CHANNEL  5
+#define VREF_ADC_CHANNEL  6
+//---ADC INJECTED_MODE_CH---//
 
 typedef struct 
 {
@@ -40,6 +45,7 @@ typedef struct
     float Valtage_Current_B;
     float Valtage_Current_C;
     float Valtage_VCC;
+		float Valtage_NTC;
     float Temperature;
     float Internal_Vref;
     float Vref_Offset;

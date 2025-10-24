@@ -1,7 +1,7 @@
 /*
  * @Date: 2025-03-09 20:13:14
  * @LastEditors: ZHUOZHUOO
- * @LastEditTime: 2025-03-10 11:26:13
+ * @LastEditTime: 2025-10-23 22:55:09
  * @FilePath: \MDK-ARM\USER\configure.h
  * @Description: Do not edit
  */
@@ -43,8 +43,6 @@
 #define SLIDING_WINDOW_SIZE 8
 //错误处理模式
 #define ERROR_MODE MODE_OFF
-//nFAULT中断处理模式 MODE_ON:中断 MODE_OFF:轮询
-#define N_FAULT_MODE MODE_OFF
 //MA600差分滤波窗口宽度
 #define DIFF_SLIDING_WINDOW_SIZE 64
 //MA600角度滤波窗口宽度

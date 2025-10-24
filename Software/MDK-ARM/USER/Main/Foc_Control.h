@@ -11,7 +11,7 @@
 #include "configure.h"
 #include "arm_math.h"
 #include "arm_const_structs.h"
-#include "periph_encoder_spi.h"
+#include "mt6825_spi.h"
 #include "Foc_Error.h"
 #include "Foc_Comm.h"
 #include "Init_music.h"

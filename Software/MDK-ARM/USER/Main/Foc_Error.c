@@ -1,8 +1,8 @@
 /*
  * @Date: 2025-02-27 19:16:35
  * @LastEditors: ZHUOZHUOO
- * @LastEditTime: 2025-03-01 23:06:25
- * @FilePath: \undefinedf:\ZHUOZHUOO--Github\FOC_DRV8323\Software\STM32G431 Cube\FOC_DRV8323\MDK-ARM\USER\Main\Foc_Error.c
+ * @LastEditTime: 2025-10-24 14:17:13
+ * @FilePath: \MDK-ARM\USER\Main\Foc_Error.c
  * @Description: Do not edit
  */
 #include "Foc_Error.h"
@@ -92,7 +92,7 @@ void Error_Main_Loop(void)
     }
 #if N_FAULT_MODE == MODE_OFF
     //Check DRV8323 nFault Pin
-    else if (HAL_GPIO_ReadPin(DRV8323_nFault_PORT, DRV8323_nFault) == GPIO_PIN_RESET)
+    else if (HAL_GPIO_ReadPin(nFault_GPIO_Port, nFault_Pin) == GPIO_PIN_RESET)
     {
         // Motor_Error.STATE_WINDOW.DRV8323_Error_State_Window |= 1;
         // if(Motor_Error.STATE_WINDOW.DRV8323_Error_State_Window == 0xFF)
@@ -108,7 +108,7 @@ void Error_Main_Loop(void)
 // DRV8323_nFault_Interrupt
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
-    if(GPIO_Pin == DRV8323_nFault)
+    if(GPIO_Pin == nFault_Pin)
     {
     #if N_FAULT_MODE == MODE_ON
         Motor_Error.DRV8323_ERROR_STATE = 0;

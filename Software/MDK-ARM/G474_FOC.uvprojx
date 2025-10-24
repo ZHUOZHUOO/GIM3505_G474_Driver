@@ -357,7 +357,7 @@
             </VariousControls>
           </Aads>
           <LDads>
-            <umfTarg>1</umfTarg>
+            <umfTarg>0</umfTarg>
             <Ropi>0</Ropi>
             <Rwpi>0</Rwpi>
             <noStLib>0</noStLib>
@@ -705,9 +705,9 @@
               <FilePath>.\USER\Peripheral\drv8323_util.c</FilePath>
             </File>
             <File>
-              <FileName>periph_encoder_spi.c</FileName>
+              <FileName>mt6825_spi.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\USER\Peripheral\periph_encoder_spi.c</FilePath>
+              <FilePath>.\USER\Peripheral\mt6825_spi.c</FilePath>
             </File>
           </Files>
         </Group>

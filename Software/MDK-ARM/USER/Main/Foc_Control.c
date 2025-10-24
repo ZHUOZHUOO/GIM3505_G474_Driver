@@ -1,12 +1,13 @@
 /*
  * @Date: 2025-02-26 18:25:59
  * @LastEditors: ZHUOZHUOO
- * @LastEditTime: 2025-04-08 17:44:50
- * @FilePath: \FOC_DRV8323\MDK-ARM\USER\Main\Foc_Control.c
+ * @LastEditTime: 2025-10-24 13:46:16
+ * @FilePath: \MDK-ARM\USER\Main\Foc_Control.c
  * @Description: Do not edit
  */
 
 #include "Foc_Control.h"
+#include "main.h"
 
 #define Min(a, b) ((a) < (b) ? (a) : (b))
 #define Max(a, b) ((a) > (b) ? (a) : (b))
@@ -20,10 +21,6 @@ PID_TypeDef Current_Iq_PID;
 PID_TypeDef Speed_PID;
 PID_TypeDef Position_PID;
 PID_TypeDef Open_Loop_Speed_PID;
-
-
-#define MA600_CS_GPIO_Port GPIOA
-#define MA600_CS_Pin GPIO_PIN_15
 
 //===========HT4315==========//
 #if MOTOR_TYPE == HT4315
@@ -109,20 +106,20 @@ void CALC_SVPWM(float Valpha, float Vbeta) {
     uint16_t hTimePhB = (uint16_t)times[order[1]];
     uint16_t hTimePhC = (uint16_t)times[order[2]];
 
-		// 更新寄存器
-    #if 	THREE_PHASE_LINE_SEQUENCCE == A_B_C
-	TIM1->CCR1 = hTimePhA;
-	TIM1->CCR2 = hTimePhB;
-	TIM1->CCR3 = hTimePhC;
-    #elif 	THREE_PHASE_LINE_SEQUENCCE == A_C_B
-	TIM1->CCR1 = hTimePhA;
-	TIM1->CCR2 = hTimePhC;
-	TIM1->CCR3 = hTimePhB;
-    #endif
+//		// 更新寄存器
+//    #if 	THREE_PHASE_LINE_SEQUENCCE == A_B_C
+//	TIM1->CCR1 = hTimePhA;
+//	TIM1->CCR2 = hTimePhB;
+//	TIM1->CCR3 = hTimePhC;
+//    #elif 	THREE_PHASE_LINE_SEQUENCCE == A_C_B
+//	TIM1->CCR1 = hTimePhA;
+//	TIM1->CCR2 = hTimePhC;
+//	TIM1->CCR3 = hTimePhB;
+//    #endif
 		
-//	TIM1->CCR1 = 0;
-//	TIM1->CCR2 = 0;
-//	TIM1->CCR3 = 0;
+	TIM1->CCR1 = 0;
+	TIM1->CCR2 = 0;
+	TIM1->CCR3 = 0;
 		
     // 保存到结构体
     Motor_FOC.hTimePhA = hTimePhA;
@@ -173,7 +170,7 @@ void FOC_Struct_Init(FOC_Struct *foc)
     foc->Ialpha = 0;
     foc->Ibeta = 0;
     foc->Id = 0;
-		foc->Id_ref = 0.0f;
+	foc->Id_ref = 0.0f;
     foc->Iq = 0;
     foc->Iq_ref = 0.0f;
     foc->Vd = 0;
@@ -186,7 +183,7 @@ void FOC_Struct_Init(FOC_Struct *foc)
     foc->Theta = 0;
     foc->Theta_Ref = -360 / 360.0f * TWO_PI;
     foc->ElecTheta = 0;
-		foc->ElecTheta_Offset = Elec_Theta_Zero_Point;
+	foc->ElecTheta_Offset = Elec_Theta_Zero_Point;
     foc->Open_Loop_Theta = 0;
 
     foc->hTimePhA = 0;
@@ -259,9 +256,9 @@ void FOC_Main_Init(void)
 	Error_Struct_Init(&Motor_Error);
 
 	DWT_Init(170);
-	Encoder_SPI_Init(&MA600_spi, &MA600_diff_Filter , MA600_diff_buffer, 
-					&MA600_angle_Filter, MA600_angle_buffer,
-					&hspi1, MA600_CS_GPIO_Port, MA600_CS_Pin, 0.01f);
+	Encoder_SPI_Init(&MT6825_spi, &MT6825_diff_Filter , MT6825_diff_buffer, 
+					&MT6825_angle_Filter, MT6825_angle_buffer,
+					&hspi1, SPI1_CS_GPIO_Port, SPI1_CS_Pin, 0.01f);
 	FDCAN_IntFilterAndStart();
 	Adc_Init();
 	DRV8323_Init();
@@ -296,8 +293,8 @@ void FOC_Main_Init(void)
 	CALC_SVPWM(Motor_FOC.Valpha, Motor_FOC.Vbeta);
 	HAL_Delay(1000);
 
-	Encoder_Read_Reg(&MA600_spi);
-	Motor_FOC.ElecTheta_Offset = ((int32_t)(MOTOR_POLE_PAIRS * (MA600_spi.last_angle + 360))% 360) / 360.0f;
+	Encoder_Read_Reg(&MT6825_spi);
+	Motor_FOC.ElecTheta_Offset = ((int32_t)(MOTOR_POLE_PAIRS * (MT6825_spi.last_angle + 360))% 360) / 360.0f;
 	
 	
 	Motor_FOC.Iq_ref = 0.0f;
@@ -316,7 +313,7 @@ void FOC_Main_Loop_H_Freq(void)
         t += Motor_FOC.Speed_Rpm * SPEED_STEP;          // 时间步进
         if (t >= 1.0f) t -= 1.0f;                       // 周期1秒
     }
-    Motor_FOC.ElecTheta = FOC_ElecTheta_Calc(MA600_spi.last_angle);
+    Motor_FOC.ElecTheta = FOC_ElecTheta_Calc(MT6825_spi.last_angle);
 	
 //----------Ia Ib Ic Calc----------//
     Motor_FOC.Ia = (DRV8323_VREF_DIV_TWO - Motor_ADC.Valtage_Current_A);
@@ -365,7 +362,7 @@ void FOC_Main_Loop_H_Freq(void)
     if (Motor_Run.state_led_flag == 10000)
     {
         Motor_Run.state_led_flag = 0;
-        HAL_GPIO_TogglePin(LED_PORT, LED_Pin);
+        HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
     }
 		if ((Motor_Run.state_led_flag & 0x07) == 0)
     {
@@ -380,7 +377,7 @@ void FOC_Main_Loop_H_Freq(void)
 
 void FOC_Main_Loop_L_Freq(void)
 {		
-	Encoder_Read_Reg(&MA600_spi);
+	Encoder_Read_Reg(&MT6825_spi);
 
 		if(Motor_FOC.Motor_Close_Loop_Mode == Speed_Open_Loop)
 		{
@@ -391,14 +388,14 @@ void FOC_Main_Loop_L_Freq(void)
 		}
     else if(Motor_FOC.Motor_Close_Loop_Mode == Speed_Mode)
     {
-        Motor_FOC.Speed_Rpm = MOTOR_ENCODER_DIR * Encoder_SPI_Get_Angular_Speed(&MA600_spi);
+        Motor_FOC.Speed_Rpm = MOTOR_ENCODER_DIR * Encoder_SPI_Get_Angular_Speed(&MT6825_spi);
         PID_SetFdb(&Speed_PID, Motor_FOC.Speed_Rpm);
         PID_SetRef(&Speed_PID, Motor_FOC.Speed_Rpm_Ref * TWO_PI);//rad/s
         PID_Calc(&Speed_PID);
         Motor_FOC.Iq_ref = Min(Max(Motor_FOC.Iq_ref + PID_GetOutput(&Speed_PID), -MAX_IQ), MAX_IQ);
     }
     else if (Motor_FOC.Motor_Close_Loop_Mode == Position_Mode){
-        Motor_FOC.Theta = MOTOR_ENCODER_DIR * FOC_Theta_Calc(Encoder_SPI_Get_Angle(&MA600_spi));//单位：rad
+        Motor_FOC.Theta = MOTOR_ENCODER_DIR * FOC_Theta_Calc(Encoder_SPI_Get_Angle(&MT6825_spi));//单位：rad
         PID_SetFdb(&Position_PID, Motor_FOC.Theta);//rad
         PID_SetRef(&Position_PID, Motor_FOC.Theta_Ref);//rad
         PID_Calc(&Position_PID);
