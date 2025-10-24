@@ -1,2072 +1,0 @@
-Dependencies for Project 'G474_FOC', Target 'G474_FOC': (DO NOT MODIFY !)
-F (startup_stm32g474xx.s)(0x68FB429F)(--cpu Cortex-M4.fp -g --apcs=interwork -I.\RTE\_G474_FOC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include--pd "__UVISION_VERSION SETA 523" --pd "_RTE_ SETA 1" --pd "STM32G474xx SETA 1"--list startup_stm32g474xx.lst --xref -o g474_foc\startup_stm32g474xx.o --depend g474_foc\startup_stm32g474xx.d)
-F (../Core/Src/main.c)(0x68F9EC90)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM/USER -I ../MDK-ARM/USER/Utility -I ../MDK-ARM/USER/Main -I ./DSP_Lib -I ./DSP_Lib/Include -I ../MDK-ARM/USER/System -I ../MDK-ARM/USER/Peripheral -I ../MDK-ARM/USER/Algorithm -I ../MDK-ARM/USER/Library-I.\RTE\_G474_FOC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32G474xx -DUSE_HAL_DRIVER -DSTM32G474xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o g474_foc\main.o --omf_browse g474_foc\main.crf --depend g474_foc\main.d)
-I (../Core/Inc/main.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x680DF886)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Include/core_cm4.h)(0x680DF87B)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x680DF87B)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x680DF886)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_fdcan.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x680DF886)
-I (../Core/Inc/adc.h)(0x68D36467)
-I (../Core/Inc/dma.h)(0x68D367E2)
-I (../Core/Inc/fdcan.h)(0x68D36467)
-I (../Core/Inc/spi.h)(0x68D36468)
-I (../Core/Inc/tim.h)(0x68D36468)
-I (../Core/Inc/gpio.h)(0x68D36467)
-I (../MDK-ARM/USER/Main/Foc_Control.h)(0x68FB17F7)
-I (../MDK-ARM/USER/Algorithm/alg_pid.h)(0x680A4281)
-I (../MDK-ARM/USER/Library/lib_math.h)(0x680A4281)
-I (./DSP_Lib/Include/arm_math.h)(0x680A4281)
-I (./DSP_Lib/Include/core_cm4.h)(0x680A4281)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x57F606B6)
-I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
-I (../MDK-ARM/USER/Library/lib_filter.h)(0x680A4281)
-I (../MDK-ARM/USER/Peripheral/drv8323_util.h)(0x68FB1A43)
-I (../MDK-ARM/USER/configure.h)(0x68FB1DD9)
-I (./DSP_Lib/Include/arm_const_structs.h)(0x680A4281)
-I (./DSP_Lib/Include/arm_common_tables.h)(0x680A4281)
-I (../MDK-ARM/USER/Peripheral/mt6825_spi.h)(0x68FB194C)
-I (../MDK-ARM/USER/System/sys_dwt.h)(0x680A4281)
-I (../MDK-ARM/USER/Utility/util_gpio.h)(0x680A4281)
-I (../MDK-ARM/USER/Utility/util_spi.h)(0x680A4281)
-I (../MDK-ARM/USER/Algorithm/alg_swf.h)(0x686125A3)
-I (../MDK-ARM/USER/Main/Foc_Error.h)(0x68AC61B5)
-I (../MDK-ARM/USER/Main/Foc_Comm.h)(0x686125A3)
-I (../MDK-ARM/USER/Utility/util_fdcan.h)(0x686125A3)
-I (../MDK-ARM/USER/Main/Init_music.h)(0x680A4281)
-I (../MDK-ARM/USER/Utility/util_adc.h)(0x68FA0AAA)
-F (../Core/Src/gpio.c)(0x68FB4117)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM/USER -I ../MDK-ARM/USER/Utility -I ../MDK-ARM/USER/Main -I ./DSP_Lib -I ./DSP_Lib/Include -I ../MDK-ARM/USER/System -I ../MDK-ARM/USER/Peripheral -I ../MDK-ARM/USER/Algorithm -I ../MDK-ARM/USER/Library-I.\RTE\_G474_FOC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32G474xx -DUSE_HAL_DRIVER -DSTM32G474xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o g474_foc\gpio.o --omf_browse g474_foc\gpio.crf --depend g474_foc\gpio.d)
-I (../Core/Inc/gpio.h)(0x68D36467)
-I (../Core/Inc/main.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x680DF886)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Include/core_cm4.h)(0x680DF87B)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x680DF87B)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x680DF886)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_fdcan.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x680DF886)
-F (../Core/Src/adc.c)(0x68FA065E)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM/USER -I ../MDK-ARM/USER/Utility -I ../MDK-ARM/USER/Main -I ./DSP_Lib -I ./DSP_Lib/Include -I ../MDK-ARM/USER/System -I ../MDK-ARM/USER/Peripheral -I ../MDK-ARM/USER/Algorithm -I ../MDK-ARM/USER/Library-I.\RTE\_G474_FOC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32G474xx -DUSE_HAL_DRIVER -DSTM32G474xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o g474_foc\adc.o --omf_browse g474_foc\adc.crf --depend g474_foc\adc.d)
-I (../Core/Inc/adc.h)(0x68D36467)
-I (../Core/Inc/main.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x680DF886)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Include/core_cm4.h)(0x680DF87B)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x680DF87B)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x680DF886)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_fdcan.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x680DF886)
-F (../Core/Src/dma.c)(0x68FA065E)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM/USER -I ../MDK-ARM/USER/Utility -I ../MDK-ARM/USER/Main -I ./DSP_Lib -I ./DSP_Lib/Include -I ../MDK-ARM/USER/System -I ../MDK-ARM/USER/Peripheral -I ../MDK-ARM/USER/Algorithm -I ../MDK-ARM/USER/Library-I.\RTE\_G474_FOC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32G474xx -DUSE_HAL_DRIVER -DSTM32G474xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o g474_foc\dma.o --omf_browse g474_foc\dma.crf --depend g474_foc\dma.d)
-I (../Core/Inc/dma.h)(0x68D367E2)
-I (../Core/Inc/main.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x680DF886)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Include/core_cm4.h)(0x680DF87B)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x680DF87B)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x680DF886)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_fdcan.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x680DF886)
-F (../Core/Src/fdcan.c)(0x68FB222B)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM/USER -I ../MDK-ARM/USER/Utility -I ../MDK-ARM/USER/Main -I ./DSP_Lib -I ./DSP_Lib/Include -I ../MDK-ARM/USER/System -I ../MDK-ARM/USER/Peripheral -I ../MDK-ARM/USER/Algorithm -I ../MDK-ARM/USER/Library-I.\RTE\_G474_FOC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32G474xx -DUSE_HAL_DRIVER -DSTM32G474xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o g474_foc\fdcan.o --omf_browse g474_foc\fdcan.crf --depend g474_foc\fdcan.d)
-I (../Core/Inc/fdcan.h)(0x68D36467)
-I (../Core/Inc/main.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x680DF886)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Include/core_cm4.h)(0x680DF87B)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x680DF87B)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x680DF886)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_fdcan.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x680DF886)
-F (../Core/Src/spi.c)(0x68FB4299)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM/USER -I ../MDK-ARM/USER/Utility -I ../MDK-ARM/USER/Main -I ./DSP_Lib -I ./DSP_Lib/Include -I ../MDK-ARM/USER/System -I ../MDK-ARM/USER/Peripheral -I ../MDK-ARM/USER/Algorithm -I ../MDK-ARM/USER/Library-I.\RTE\_G474_FOC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32G474xx -DUSE_HAL_DRIVER -DSTM32G474xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o g474_foc\spi.o --omf_browse g474_foc\spi.crf --depend g474_foc\spi.d)
-I (../Core/Inc/spi.h)(0x68D36468)
-I (../Core/Inc/main.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x680DF886)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Include/core_cm4.h)(0x680DF87B)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x680DF87B)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x680DF886)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_fdcan.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x680DF886)
-F (../Core/Src/tim.c)(0x68FB222B)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM/USER -I ../MDK-ARM/USER/Utility -I ../MDK-ARM/USER/Main -I ./DSP_Lib -I ./DSP_Lib/Include -I ../MDK-ARM/USER/System -I ../MDK-ARM/USER/Peripheral -I ../MDK-ARM/USER/Algorithm -I ../MDK-ARM/USER/Library-I.\RTE\_G474_FOC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32G474xx -DUSE_HAL_DRIVER -DSTM32G474xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o g474_foc\tim.o --omf_browse g474_foc\tim.crf --depend g474_foc\tim.d)
-I (../Core/Inc/tim.h)(0x68D36468)
-I (../Core/Inc/main.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x680DF886)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Include/core_cm4.h)(0x680DF87B)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x680DF87B)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x680DF886)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_fdcan.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x680DF886)
-F (../Core/Src/stm32g4xx_it.c)(0x68FB222B)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM/USER -I ../MDK-ARM/USER/Utility -I ../MDK-ARM/USER/Main -I ./DSP_Lib -I ./DSP_Lib/Include -I ../MDK-ARM/USER/System -I ../MDK-ARM/USER/Peripheral -I ../MDK-ARM/USER/Algorithm -I ../MDK-ARM/USER/Library-I.\RTE\_G474_FOC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32G474xx -DUSE_HAL_DRIVER -DSTM32G474xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o g474_foc\stm32g4xx_it.o --omf_browse g474_foc\stm32g4xx_it.crf --depend g474_foc\stm32g4xx_it.d)
-I (../Core/Inc/main.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x680DF886)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Include/core_cm4.h)(0x680DF87B)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x680DF87B)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x680DF886)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_fdcan.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x680DF886)
-I (../Core/Inc/stm32g4xx_it.h)(0x68FB222B)
-F (../Core/Src/stm32g4xx_hal_msp.c)(0x68D36468)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM/USER -I ../MDK-ARM/USER/Utility -I ../MDK-ARM/USER/Main -I ./DSP_Lib -I ./DSP_Lib/Include -I ../MDK-ARM/USER/System -I ../MDK-ARM/USER/Peripheral -I ../MDK-ARM/USER/Algorithm -I ../MDK-ARM/USER/Library-I.\RTE\_G474_FOC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32G474xx -DUSE_HAL_DRIVER -DSTM32G474xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o g474_foc\stm32g4xx_hal_msp.o --omf_browse g474_foc\stm32g4xx_hal_msp.crf --depend g474_foc\stm32g4xx_hal_msp.d)
-I (../Core/Inc/main.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x680DF886)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Include/core_cm4.h)(0x680DF87B)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x680DF87B)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x680DF886)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_fdcan.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x680DF886)
-F (../Core/Src/stm32g4xx_hal_timebase_tim.c)(0x68D36468)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM/USER -I ../MDK-ARM/USER/Utility -I ../MDK-ARM/USER/Main -I ./DSP_Lib -I ./DSP_Lib/Include -I ../MDK-ARM/USER/System -I ../MDK-ARM/USER/Peripheral -I ../MDK-ARM/USER/Algorithm -I ../MDK-ARM/USER/Library-I.\RTE\_G474_FOC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32G474xx -DUSE_HAL_DRIVER -DSTM32G474xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o g474_foc\stm32g4xx_hal_timebase_tim.o --omf_browse g474_foc\stm32g4xx_hal_timebase_tim.crf --depend g474_foc\stm32g4xx_hal_timebase_tim.d)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x680DF886)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Include/core_cm4.h)(0x680DF87B)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x680DF87B)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x680DF886)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_fdcan.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x680DF886)
-F (../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c)(0x680DF886)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM/USER -I ../MDK-ARM/USER/Utility -I ../MDK-ARM/USER/Main -I ./DSP_Lib -I ./DSP_Lib/Include -I ../MDK-ARM/USER/System -I ../MDK-ARM/USER/Peripheral -I ../MDK-ARM/USER/Algorithm -I ../MDK-ARM/USER/Library-I.\RTE\_G474_FOC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32G474xx -DUSE_HAL_DRIVER -DSTM32G474xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o g474_foc\stm32g4xx_hal_tim.o --omf_browse g474_foc\stm32g4xx_hal_tim.crf --depend g474_foc\stm32g4xx_hal_tim.d)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x680DF886)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Include/core_cm4.h)(0x680DF87B)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x680DF87B)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x680DF886)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_fdcan.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x680DF886)
-F (../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.c)(0x680DF886)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM/USER -I ../MDK-ARM/USER/Utility -I ../MDK-ARM/USER/Main -I ./DSP_Lib -I ./DSP_Lib/Include -I ../MDK-ARM/USER/System -I ../MDK-ARM/USER/Peripheral -I ../MDK-ARM/USER/Algorithm -I ../MDK-ARM/USER/Library-I.\RTE\_G474_FOC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32G474xx -DUSE_HAL_DRIVER -DSTM32G474xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o g474_foc\stm32g4xx_hal_tim_ex.o --omf_browse g474_foc\stm32g4xx_hal_tim_ex.crf --depend g474_foc\stm32g4xx_hal_tim_ex.d)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x680DF886)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Include/core_cm4.h)(0x680DF87B)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x680DF87B)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x680DF886)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_fdcan.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x680DF886)
-F (../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc.c)(0x680DF886)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM/USER -I ../MDK-ARM/USER/Utility -I ../MDK-ARM/USER/Main -I ./DSP_Lib -I ./DSP_Lib/Include -I ../MDK-ARM/USER/System -I ../MDK-ARM/USER/Peripheral -I ../MDK-ARM/USER/Algorithm -I ../MDK-ARM/USER/Library-I.\RTE\_G474_FOC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32G474xx -DUSE_HAL_DRIVER -DSTM32G474xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o g474_foc\stm32g4xx_hal_adc.o --omf_browse g474_foc\stm32g4xx_hal_adc.crf --depend g474_foc\stm32g4xx_hal_adc.d)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x680DF886)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Include/core_cm4.h)(0x680DF87B)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x680DF87B)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x680DF886)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_fdcan.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x680DF886)
-F (../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc_ex.c)(0x680DF886)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM/USER -I ../MDK-ARM/USER/Utility -I ../MDK-ARM/USER/Main -I ./DSP_Lib -I ./DSP_Lib/Include -I ../MDK-ARM/USER/System -I ../MDK-ARM/USER/Peripheral -I ../MDK-ARM/USER/Algorithm -I ../MDK-ARM/USER/Library-I.\RTE\_G474_FOC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32G474xx -DUSE_HAL_DRIVER -DSTM32G474xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o g474_foc\stm32g4xx_hal_adc_ex.o --omf_browse g474_foc\stm32g4xx_hal_adc_ex.crf --depend g474_foc\stm32g4xx_hal_adc_ex.d)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x680DF886)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Include/core_cm4.h)(0x680DF87B)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x680DF87B)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x680DF886)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_fdcan.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x680DF886)
-F (../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_adc.c)(0x680DF886)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM/USER -I ../MDK-ARM/USER/Utility -I ../MDK-ARM/USER/Main -I ./DSP_Lib -I ./DSP_Lib/Include -I ../MDK-ARM/USER/System -I ../MDK-ARM/USER/Peripheral -I ../MDK-ARM/USER/Algorithm -I ../MDK-ARM/USER/Library-I.\RTE\_G474_FOC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32G474xx -DUSE_HAL_DRIVER -DSTM32G474xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o g474_foc\stm32g4xx_ll_adc.o --omf_browse g474_foc\stm32g4xx_ll_adc.crf --depend g474_foc\stm32g4xx_ll_adc.d)
-F (../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c)(0x680DF886)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM/USER -I ../MDK-ARM/USER/Utility -I ../MDK-ARM/USER/Main -I ./DSP_Lib -I ./DSP_Lib/Include -I ../MDK-ARM/USER/System -I ../MDK-ARM/USER/Peripheral -I ../MDK-ARM/USER/Algorithm -I ../MDK-ARM/USER/Library-I.\RTE\_G474_FOC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32G474xx -DUSE_HAL_DRIVER -DSTM32G474xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o g474_foc\stm32g4xx_hal.o --omf_browse g474_foc\stm32g4xx_hal.crf --depend g474_foc\stm32g4xx_hal.d)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x680DF886)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Include/core_cm4.h)(0x680DF87B)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x680DF87B)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x680DF886)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_fdcan.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x680DF886)
-F (../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c)(0x680DF886)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM/USER -I ../MDK-ARM/USER/Utility -I ../MDK-ARM/USER/Main -I ./DSP_Lib -I ./DSP_Lib/Include -I ../MDK-ARM/USER/System -I ../MDK-ARM/USER/Peripheral -I ../MDK-ARM/USER/Algorithm -I ../MDK-ARM/USER/Library-I.\RTE\_G474_FOC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32G474xx -DUSE_HAL_DRIVER -DSTM32G474xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o g474_foc\stm32g4xx_hal_rcc.o --omf_browse g474_foc\stm32g4xx_hal_rcc.crf --depend g474_foc\stm32g4xx_hal_rcc.d)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x680DF886)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Include/core_cm4.h)(0x680DF87B)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x680DF87B)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x680DF886)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_fdcan.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x680DF886)
-F (../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.c)(0x680DF886)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM/USER -I ../MDK-ARM/USER/Utility -I ../MDK-ARM/USER/Main -I ./DSP_Lib -I ./DSP_Lib/Include -I ../MDK-ARM/USER/System -I ../MDK-ARM/USER/Peripheral -I ../MDK-ARM/USER/Algorithm -I ../MDK-ARM/USER/Library-I.\RTE\_G474_FOC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32G474xx -DUSE_HAL_DRIVER -DSTM32G474xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o g474_foc\stm32g4xx_hal_rcc_ex.o --omf_browse g474_foc\stm32g4xx_hal_rcc_ex.crf --depend g474_foc\stm32g4xx_hal_rcc_ex.d)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x680DF886)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Include/core_cm4.h)(0x680DF87B)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x680DF87B)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x680DF886)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_fdcan.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x680DF886)
-F (../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash.c)(0x680DF886)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM/USER -I ../MDK-ARM/USER/Utility -I ../MDK-ARM/USER/Main -I ./DSP_Lib -I ./DSP_Lib/Include -I ../MDK-ARM/USER/System -I ../MDK-ARM/USER/Peripheral -I ../MDK-ARM/USER/Algorithm -I ../MDK-ARM/USER/Library-I.\RTE\_G474_FOC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32G474xx -DUSE_HAL_DRIVER -DSTM32G474xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o g474_foc\stm32g4xx_hal_flash.o --omf_browse g474_foc\stm32g4xx_hal_flash.crf --depend g474_foc\stm32g4xx_hal_flash.d)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x680DF886)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Include/core_cm4.h)(0x680DF87B)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x680DF87B)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x680DF886)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_fdcan.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x680DF886)
-F (../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ex.c)(0x680DF886)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM/USER -I ../MDK-ARM/USER/Utility -I ../MDK-ARM/USER/Main -I ./DSP_Lib -I ./DSP_Lib/Include -I ../MDK-ARM/USER/System -I ../MDK-ARM/USER/Peripheral -I ../MDK-ARM/USER/Algorithm -I ../MDK-ARM/USER/Library-I.\RTE\_G474_FOC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32G474xx -DUSE_HAL_DRIVER -DSTM32G474xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o g474_foc\stm32g4xx_hal_flash_ex.o --omf_browse g474_foc\stm32g4xx_hal_flash_ex.crf --depend g474_foc\stm32g4xx_hal_flash_ex.d)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x680DF886)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Include/core_cm4.h)(0x680DF87B)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x680DF87B)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x680DF886)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_fdcan.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x680DF886)
-F (../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c)(0x680DF886)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM/USER -I ../MDK-ARM/USER/Utility -I ../MDK-ARM/USER/Main -I ./DSP_Lib -I ./DSP_Lib/Include -I ../MDK-ARM/USER/System -I ../MDK-ARM/USER/Peripheral -I ../MDK-ARM/USER/Algorithm -I ../MDK-ARM/USER/Library-I.\RTE\_G474_FOC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32G474xx -DUSE_HAL_DRIVER -DSTM32G474xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o g474_foc\stm32g4xx_hal_flash_ramfunc.o --omf_browse g474_foc\stm32g4xx_hal_flash_ramfunc.crf --depend g474_foc\stm32g4xx_hal_flash_ramfunc.d)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x680DF886)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Include/core_cm4.h)(0x680DF87B)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x680DF87B)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x680DF886)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_fdcan.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x680DF886)
-F (../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c)(0x680DF886)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM/USER -I ../MDK-ARM/USER/Utility -I ../MDK-ARM/USER/Main -I ./DSP_Lib -I ./DSP_Lib/Include -I ../MDK-ARM/USER/System -I ../MDK-ARM/USER/Peripheral -I ../MDK-ARM/USER/Algorithm -I ../MDK-ARM/USER/Library-I.\RTE\_G474_FOC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32G474xx -DUSE_HAL_DRIVER -DSTM32G474xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o g474_foc\stm32g4xx_hal_gpio.o --omf_browse g474_foc\stm32g4xx_hal_gpio.crf --depend g474_foc\stm32g4xx_hal_gpio.d)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x680DF886)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Include/core_cm4.h)(0x680DF87B)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x680DF87B)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x680DF886)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_fdcan.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x680DF886)
-F (../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c)(0x680DF886)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM/USER -I ../MDK-ARM/USER/Utility -I ../MDK-ARM/USER/Main -I ./DSP_Lib -I ./DSP_Lib/Include -I ../MDK-ARM/USER/System -I ../MDK-ARM/USER/Peripheral -I ../MDK-ARM/USER/Algorithm -I ../MDK-ARM/USER/Library-I.\RTE\_G474_FOC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32G474xx -DUSE_HAL_DRIVER -DSTM32G474xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o g474_foc\stm32g4xx_hal_exti.o --omf_browse g474_foc\stm32g4xx_hal_exti.crf --depend g474_foc\stm32g4xx_hal_exti.d)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x680DF886)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Include/core_cm4.h)(0x680DF87B)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x680DF87B)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x680DF886)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_fdcan.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x680DF886)
-F (../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c)(0x680DF886)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM/USER -I ../MDK-ARM/USER/Utility -I ../MDK-ARM/USER/Main -I ./DSP_Lib -I ./DSP_Lib/Include -I ../MDK-ARM/USER/System -I ../MDK-ARM/USER/Peripheral -I ../MDK-ARM/USER/Algorithm -I ../MDK-ARM/USER/Library-I.\RTE\_G474_FOC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32G474xx -DUSE_HAL_DRIVER -DSTM32G474xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o g474_foc\stm32g4xx_hal_dma.o --omf_browse g474_foc\stm32g4xx_hal_dma.crf --depend g474_foc\stm32g4xx_hal_dma.d)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x680DF886)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Include/core_cm4.h)(0x680DF87B)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x680DF87B)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x680DF886)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_fdcan.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x680DF886)
-F (../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma_ex.c)(0x680DF886)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM/USER -I ../MDK-ARM/USER/Utility -I ../MDK-ARM/USER/Main -I ./DSP_Lib -I ./DSP_Lib/Include -I ../MDK-ARM/USER/System -I ../MDK-ARM/USER/Peripheral -I ../MDK-ARM/USER/Algorithm -I ../MDK-ARM/USER/Library-I.\RTE\_G474_FOC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32G474xx -DUSE_HAL_DRIVER -DSTM32G474xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o g474_foc\stm32g4xx_hal_dma_ex.o --omf_browse g474_foc\stm32g4xx_hal_dma_ex.crf --depend g474_foc\stm32g4xx_hal_dma_ex.d)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x680DF886)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Include/core_cm4.h)(0x680DF87B)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x680DF87B)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x680DF886)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_fdcan.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x680DF886)
-F (../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c)(0x680DF886)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM/USER -I ../MDK-ARM/USER/Utility -I ../MDK-ARM/USER/Main -I ./DSP_Lib -I ./DSP_Lib/Include -I ../MDK-ARM/USER/System -I ../MDK-ARM/USER/Peripheral -I ../MDK-ARM/USER/Algorithm -I ../MDK-ARM/USER/Library-I.\RTE\_G474_FOC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32G474xx -DUSE_HAL_DRIVER -DSTM32G474xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o g474_foc\stm32g4xx_hal_pwr.o --omf_browse g474_foc\stm32g4xx_hal_pwr.crf --depend g474_foc\stm32g4xx_hal_pwr.d)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x680DF886)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Include/core_cm4.h)(0x680DF87B)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x680DF87B)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x680DF886)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_fdcan.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x680DF886)
-F (../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c)(0x680DF886)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM/USER -I ../MDK-ARM/USER/Utility -I ../MDK-ARM/USER/Main -I ./DSP_Lib -I ./DSP_Lib/Include -I ../MDK-ARM/USER/System -I ../MDK-ARM/USER/Peripheral -I ../MDK-ARM/USER/Algorithm -I ../MDK-ARM/USER/Library-I.\RTE\_G474_FOC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32G474xx -DUSE_HAL_DRIVER -DSTM32G474xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o g474_foc\stm32g4xx_hal_pwr_ex.o --omf_browse g474_foc\stm32g4xx_hal_pwr_ex.crf --depend g474_foc\stm32g4xx_hal_pwr_ex.d)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x680DF886)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Include/core_cm4.h)(0x680DF87B)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x680DF87B)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x680DF886)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_fdcan.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x680DF886)
-F (../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c)(0x680DF886)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM/USER -I ../MDK-ARM/USER/Utility -I ../MDK-ARM/USER/Main -I ./DSP_Lib -I ./DSP_Lib/Include -I ../MDK-ARM/USER/System -I ../MDK-ARM/USER/Peripheral -I ../MDK-ARM/USER/Algorithm -I ../MDK-ARM/USER/Library-I.\RTE\_G474_FOC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32G474xx -DUSE_HAL_DRIVER -DSTM32G474xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o g474_foc\stm32g4xx_hal_cortex.o --omf_browse g474_foc\stm32g4xx_hal_cortex.crf --depend g474_foc\stm32g4xx_hal_cortex.d)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x680DF886)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Include/core_cm4.h)(0x680DF87B)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x680DF87B)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x680DF886)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_fdcan.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x680DF886)
-F (../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_fdcan.c)(0x680DF886)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM/USER -I ../MDK-ARM/USER/Utility -I ../MDK-ARM/USER/Main -I ./DSP_Lib -I ./DSP_Lib/Include -I ../MDK-ARM/USER/System -I ../MDK-ARM/USER/Peripheral -I ../MDK-ARM/USER/Algorithm -I ../MDK-ARM/USER/Library-I.\RTE\_G474_FOC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32G474xx -DUSE_HAL_DRIVER -DSTM32G474xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o g474_foc\stm32g4xx_hal_fdcan.o --omf_browse g474_foc\stm32g4xx_hal_fdcan.crf --depend g474_foc\stm32g4xx_hal_fdcan.d)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x680DF886)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Include/core_cm4.h)(0x680DF87B)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x680DF87B)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x680DF886)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_fdcan.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x680DF886)
-F (../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c)(0x680DF886)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM/USER -I ../MDK-ARM/USER/Utility -I ../MDK-ARM/USER/Main -I ./DSP_Lib -I ./DSP_Lib/Include -I ../MDK-ARM/USER/System -I ../MDK-ARM/USER/Peripheral -I ../MDK-ARM/USER/Algorithm -I ../MDK-ARM/USER/Library-I.\RTE\_G474_FOC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32G474xx -DUSE_HAL_DRIVER -DSTM32G474xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o g474_foc\stm32g4xx_hal_spi.o --omf_browse g474_foc\stm32g4xx_hal_spi.crf --depend g474_foc\stm32g4xx_hal_spi.d)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x680DF886)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Include/core_cm4.h)(0x680DF87B)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x680DF87B)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x680DF886)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_fdcan.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x680DF886)
-F (../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi_ex.c)(0x680DF886)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM/USER -I ../MDK-ARM/USER/Utility -I ../MDK-ARM/USER/Main -I ./DSP_Lib -I ./DSP_Lib/Include -I ../MDK-ARM/USER/System -I ../MDK-ARM/USER/Peripheral -I ../MDK-ARM/USER/Algorithm -I ../MDK-ARM/USER/Library-I.\RTE\_G474_FOC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32G474xx -DUSE_HAL_DRIVER -DSTM32G474xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o g474_foc\stm32g4xx_hal_spi_ex.o --omf_browse g474_foc\stm32g4xx_hal_spi_ex.crf --depend g474_foc\stm32g4xx_hal_spi_ex.d)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x680DF886)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Include/core_cm4.h)(0x680DF87B)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x680DF87B)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x680DF886)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_fdcan.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x680DF886)
-F (../Core/Src/system_stm32g4xx.c)(0x680DF886)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM/USER -I ../MDK-ARM/USER/Utility -I ../MDK-ARM/USER/Main -I ./DSP_Lib -I ./DSP_Lib/Include -I ../MDK-ARM/USER/System -I ../MDK-ARM/USER/Peripheral -I ../MDK-ARM/USER/Algorithm -I ../MDK-ARM/USER/Library-I.\RTE\_G474_FOC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32G474xx -DUSE_HAL_DRIVER -DSTM32G474xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o g474_foc\system_stm32g4xx.o --omf_browse g474_foc\system_stm32g4xx.crf --depend g474_foc\system_stm32g4xx.d)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Include/core_cm4.h)(0x680DF87B)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x680DF87B)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x680DF886)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x680DF886)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_fdcan.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x680DF886)
-F (.\USER\Main\Foc_Comm.c)(0x68AC61B5)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM/USER -I ../MDK-ARM/USER/Utility -I ../MDK-ARM/USER/Main -I ./DSP_Lib -I ./DSP_Lib/Include -I ../MDK-ARM/USER/System -I ../MDK-ARM/USER/Peripheral -I ../MDK-ARM/USER/Algorithm -I ../MDK-ARM/USER/Library-I.\RTE\_G474_FOC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32G474xx -DUSE_HAL_DRIVER -DSTM32G474xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o g474_foc\foc_comm.o --omf_browse g474_foc\foc_comm.crf --depend g474_foc\foc_comm.d)
-I (USER\Main\Foc_Comm.h)(0x686125A3)
-I (../MDK-ARM/USER/Utility/util_fdcan.h)(0x686125A3)
-I (../Core/Inc/fdcan.h)(0x68D36467)
-I (../Core/Inc/main.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x680DF886)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Include/core_cm4.h)(0x680DF87B)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x680DF87B)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x680DF886)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_fdcan.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x680DF886)
-I (../MDK-ARM/USER/configure.h)(0x68FB1DD9)
-I (USER\Main\Foc_Control.h)(0x68FB17F7)
-I (../Core/Inc/tim.h)(0x68D36468)
-I (../Core/Inc/gpio.h)(0x68D36467)
-I (../Core/Inc/spi.h)(0x68D36468)
-I (../MDK-ARM/USER/Algorithm/alg_pid.h)(0x680A4281)
-I (../MDK-ARM/USER/Library/lib_math.h)(0x680A4281)
-I (./DSP_Lib/Include/arm_math.h)(0x680A4281)
-I (./DSP_Lib/Include/core_cm4.h)(0x680A4281)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x57F606B6)
-I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
-I (../MDK-ARM/USER/Library/lib_filter.h)(0x680A4281)
-I (../MDK-ARM/USER/Peripheral/drv8323_util.h)(0x68FB1A43)
-I (./DSP_Lib/Include/arm_const_structs.h)(0x680A4281)
-I (./DSP_Lib/Include/arm_common_tables.h)(0x680A4281)
-I (../MDK-ARM/USER/Peripheral/mt6825_spi.h)(0x68FB194C)
-I (../MDK-ARM/USER/System/sys_dwt.h)(0x680A4281)
-I (../MDK-ARM/USER/Utility/util_gpio.h)(0x680A4281)
-I (../MDK-ARM/USER/Utility/util_spi.h)(0x680A4281)
-I (../Core/Inc/dma.h)(0x68D367E2)
-I (../MDK-ARM/USER/Main/Foc_Control.h)(0x68FB17F7)
-I (../MDK-ARM/USER/Algorithm/alg_swf.h)(0x686125A3)
-I (USER\Main\Foc_Error.h)(0x68AC61B5)
-I (USER\Main\Init_music.h)(0x680A4281)
-I (../MDK-ARM/USER/Utility/util_adc.h)(0x68FA0AAA)
-I (../Core/Inc/adc.h)(0x68D36467)
-F (.\USER\Main\Foc_Control.c)(0x68FB1E82)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM/USER -I ../MDK-ARM/USER/Utility -I ../MDK-ARM/USER/Main -I ./DSP_Lib -I ./DSP_Lib/Include -I ../MDK-ARM/USER/System -I ../MDK-ARM/USER/Peripheral -I ../MDK-ARM/USER/Algorithm -I ../MDK-ARM/USER/Library-I.\RTE\_G474_FOC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32G474xx -DUSE_HAL_DRIVER -DSTM32G474xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o g474_foc\foc_control.o --omf_browse g474_foc\foc_control.crf --depend g474_foc\foc_control.d)
-I (USER\Main\Foc_Control.h)(0x68FB17F7)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x680DF886)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Include/core_cm4.h)(0x680DF87B)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x680DF87B)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x680DF886)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_fdcan.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x680DF886)
-I (../Core/Inc/tim.h)(0x68D36468)
-I (../Core/Inc/main.h)(0x68D36468)
-I (../Core/Inc/gpio.h)(0x68D36467)
-I (../Core/Inc/spi.h)(0x68D36468)
-I (../MDK-ARM/USER/Algorithm/alg_pid.h)(0x680A4281)
-I (../MDK-ARM/USER/Library/lib_math.h)(0x680A4281)
-I (./DSP_Lib/Include/arm_math.h)(0x680A4281)
-I (./DSP_Lib/Include/core_cm4.h)(0x680A4281)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x57F606B6)
-I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
-I (../MDK-ARM/USER/Library/lib_filter.h)(0x680A4281)
-I (../MDK-ARM/USER/Peripheral/drv8323_util.h)(0x68FB1A43)
-I (../MDK-ARM/USER/configure.h)(0x68FB1DD9)
-I (./DSP_Lib/Include/arm_const_structs.h)(0x680A4281)
-I (./DSP_Lib/Include/arm_common_tables.h)(0x680A4281)
-I (../MDK-ARM/USER/Peripheral/mt6825_spi.h)(0x68FB194C)
-I (../MDK-ARM/USER/System/sys_dwt.h)(0x680A4281)
-I (../MDK-ARM/USER/Utility/util_gpio.h)(0x680A4281)
-I (../MDK-ARM/USER/Utility/util_spi.h)(0x680A4281)
-I (../Core/Inc/dma.h)(0x68D367E2)
-I (../MDK-ARM/USER/Main/Foc_Control.h)(0x68FB17F7)
-I (../MDK-ARM/USER/Algorithm/alg_swf.h)(0x686125A3)
-I (USER\Main\Foc_Error.h)(0x68AC61B5)
-I (USER\Main\Foc_Comm.h)(0x686125A3)
-I (../MDK-ARM/USER/Utility/util_fdcan.h)(0x686125A3)
-I (../Core/Inc/fdcan.h)(0x68D36467)
-I (USER\Main\Init_music.h)(0x680A4281)
-I (../MDK-ARM/USER/Utility/util_adc.h)(0x68FA0AAA)
-I (../Core/Inc/adc.h)(0x68D36467)
-F (.\USER\Main\Foc_Error.c)(0x68FB19E9)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM/USER -I ../MDK-ARM/USER/Utility -I ../MDK-ARM/USER/Main -I ./DSP_Lib -I ./DSP_Lib/Include -I ../MDK-ARM/USER/System -I ../MDK-ARM/USER/Peripheral -I ../MDK-ARM/USER/Algorithm -I ../MDK-ARM/USER/Library-I.\RTE\_G474_FOC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32G474xx -DUSE_HAL_DRIVER -DSTM32G474xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o g474_foc\foc_error.o --omf_browse g474_foc\foc_error.crf --depend g474_foc\foc_error.d)
-I (USER\Main\Foc_Error.h)(0x68AC61B5)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x680DF886)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Include/core_cm4.h)(0x680DF87B)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x680DF87B)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x680DF886)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_fdcan.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x680DF886)
-I (USER\Main\Foc_Control.h)(0x68FB17F7)
-I (../Core/Inc/tim.h)(0x68D36468)
-I (../Core/Inc/main.h)(0x68D36468)
-I (../Core/Inc/gpio.h)(0x68D36467)
-I (../Core/Inc/spi.h)(0x68D36468)
-I (../MDK-ARM/USER/Algorithm/alg_pid.h)(0x680A4281)
-I (../MDK-ARM/USER/Library/lib_math.h)(0x680A4281)
-I (./DSP_Lib/Include/arm_math.h)(0x680A4281)
-I (./DSP_Lib/Include/core_cm4.h)(0x680A4281)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x57F606B6)
-I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
-I (../MDK-ARM/USER/Library/lib_filter.h)(0x680A4281)
-I (../MDK-ARM/USER/Peripheral/drv8323_util.h)(0x68FB1A43)
-I (../MDK-ARM/USER/configure.h)(0x68FB1DD9)
-I (./DSP_Lib/Include/arm_const_structs.h)(0x680A4281)
-I (./DSP_Lib/Include/arm_common_tables.h)(0x680A4281)
-I (../MDK-ARM/USER/Peripheral/mt6825_spi.h)(0x68FB194C)
-I (../MDK-ARM/USER/System/sys_dwt.h)(0x680A4281)
-I (../MDK-ARM/USER/Utility/util_gpio.h)(0x680A4281)
-I (../MDK-ARM/USER/Utility/util_spi.h)(0x680A4281)
-I (../Core/Inc/dma.h)(0x68D367E2)
-I (../MDK-ARM/USER/Main/Foc_Control.h)(0x68FB17F7)
-I (../MDK-ARM/USER/Algorithm/alg_swf.h)(0x686125A3)
-I (USER\Main\Foc_Comm.h)(0x686125A3)
-I (../MDK-ARM/USER/Utility/util_fdcan.h)(0x686125A3)
-I (../Core/Inc/fdcan.h)(0x68D36467)
-I (USER\Main\Init_music.h)(0x680A4281)
-I (../MDK-ARM/USER/Utility/util_adc.h)(0x68FA0AAA)
-I (../Core/Inc/adc.h)(0x68D36467)
-F (.\USER\Main\Init_music.c)(0x680DBD90)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM/USER -I ../MDK-ARM/USER/Utility -I ../MDK-ARM/USER/Main -I ./DSP_Lib -I ./DSP_Lib/Include -I ../MDK-ARM/USER/System -I ../MDK-ARM/USER/Peripheral -I ../MDK-ARM/USER/Algorithm -I ../MDK-ARM/USER/Library-I.\RTE\_G474_FOC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32G474xx -DUSE_HAL_DRIVER -DSTM32G474xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o g474_foc\init_music.o --omf_browse g474_foc\init_music.crf --depend g474_foc\init_music.d)
-I (USER\Main\Init_music.h)(0x680A4281)
-I (../MDK-ARM/USER/configure.h)(0x68FB1DD9)
-I (../Core/Inc/tim.h)(0x68D36468)
-I (../Core/Inc/main.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x680DF886)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Include/core_cm4.h)(0x680DF87B)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x680DF87B)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x680DF886)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_fdcan.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x680DF886)
-I (../MDK-ARM/USER/System/sys_dwt.h)(0x680A4281)
-F (.\USER\Utility\util_adc.c)(0x686125A3)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM/USER -I ../MDK-ARM/USER/Utility -I ../MDK-ARM/USER/Main -I ./DSP_Lib -I ./DSP_Lib/Include -I ../MDK-ARM/USER/System -I ../MDK-ARM/USER/Peripheral -I ../MDK-ARM/USER/Algorithm -I ../MDK-ARM/USER/Library-I.\RTE\_G474_FOC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32G474xx -DUSE_HAL_DRIVER -DSTM32G474xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o g474_foc\util_adc.o --omf_browse g474_foc\util_adc.crf --depend g474_foc\util_adc.d)
-I (USER\Utility\util_adc.h)(0x68FA0AAA)
-I (../Core/Inc/adc.h)(0x68D36467)
-I (../Core/Inc/main.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x680DF886)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Include/core_cm4.h)(0x680DF87B)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x680DF87B)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x680DF886)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_fdcan.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x680DF886)
-I (../Core/Inc/dma.h)(0x68D367E2)
-I (../MDK-ARM/USER/Algorithm/alg_swf.h)(0x686125A3)
-I (../MDK-ARM/USER/configure.h)(0x68FB1DD9)
-I (../MDK-ARM/USER/Main/Foc_Control.h)(0x68FB17F7)
-I (../Core/Inc/tim.h)(0x68D36468)
-I (../Core/Inc/gpio.h)(0x68D36467)
-I (../Core/Inc/spi.h)(0x68D36468)
-I (../MDK-ARM/USER/Algorithm/alg_pid.h)(0x680A4281)
-I (../MDK-ARM/USER/Library/lib_math.h)(0x680A4281)
-I (./DSP_Lib/Include/arm_math.h)(0x680A4281)
-I (./DSP_Lib/Include/core_cm4.h)(0x680A4281)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x57F606B6)
-I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
-I (../MDK-ARM/USER/Library/lib_filter.h)(0x680A4281)
-I (../MDK-ARM/USER/Peripheral/drv8323_util.h)(0x68FB1A43)
-I (./DSP_Lib/Include/arm_const_structs.h)(0x680A4281)
-I (./DSP_Lib/Include/arm_common_tables.h)(0x680A4281)
-I (../MDK-ARM/USER/Peripheral/mt6825_spi.h)(0x68FB194C)
-I (../MDK-ARM/USER/System/sys_dwt.h)(0x680A4281)
-I (../MDK-ARM/USER/Utility/util_gpio.h)(0x680A4281)
-I (../MDK-ARM/USER/Utility/util_spi.h)(0x680A4281)
-I (../MDK-ARM/USER/Main/Foc_Error.h)(0x68AC61B5)
-I (../MDK-ARM/USER/Main/Foc_Comm.h)(0x686125A3)
-I (../MDK-ARM/USER/Utility/util_fdcan.h)(0x686125A3)
-I (../Core/Inc/fdcan.h)(0x68D36467)
-I (../MDK-ARM/USER/Main/Init_music.h)(0x680A4281)
-I (../MDK-ARM/USER/Utility/util_adc.h)(0x68FA0AAA)
-F (.\USER\Utility\util_fdcan.c)(0x686125A3)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM/USER -I ../MDK-ARM/USER/Utility -I ../MDK-ARM/USER/Main -I ./DSP_Lib -I ./DSP_Lib/Include -I ../MDK-ARM/USER/System -I ../MDK-ARM/USER/Peripheral -I ../MDK-ARM/USER/Algorithm -I ../MDK-ARM/USER/Library-I.\RTE\_G474_FOC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32G474xx -DUSE_HAL_DRIVER -DSTM32G474xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o g474_foc\util_fdcan.o --omf_browse g474_foc\util_fdcan.crf --depend g474_foc\util_fdcan.d)
-I (USER\Utility\util_fdcan.h)(0x686125A3)
-I (../Core/Inc/fdcan.h)(0x68D36467)
-I (../Core/Inc/main.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x680DF886)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Include/core_cm4.h)(0x680DF87B)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x680DF87B)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x680DF886)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_fdcan.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x680DF886)
-F (.\USER\Utility\util_gpio.c)(0x680A4281)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM/USER -I ../MDK-ARM/USER/Utility -I ../MDK-ARM/USER/Main -I ./DSP_Lib -I ./DSP_Lib/Include -I ../MDK-ARM/USER/System -I ../MDK-ARM/USER/Peripheral -I ../MDK-ARM/USER/Algorithm -I ../MDK-ARM/USER/Library-I.\RTE\_G474_FOC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32G474xx -DUSE_HAL_DRIVER -DSTM32G474xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o g474_foc\util_gpio.o --omf_browse g474_foc\util_gpio.crf --depend g474_foc\util_gpio.d)
-I (USER\Utility\util_gpio.h)(0x680A4281)
-I (../Core/Inc/gpio.h)(0x68D36467)
-I (../Core/Inc/main.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x680DF886)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Include/core_cm4.h)(0x680DF87B)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x680DF87B)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x680DF886)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_fdcan.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x680DF886)
-F (.\USER\Utility\util_pwm.c)(0x680A4281)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM/USER -I ../MDK-ARM/USER/Utility -I ../MDK-ARM/USER/Main -I ./DSP_Lib -I ./DSP_Lib/Include -I ../MDK-ARM/USER/System -I ../MDK-ARM/USER/Peripheral -I ../MDK-ARM/USER/Algorithm -I ../MDK-ARM/USER/Library-I.\RTE\_G474_FOC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32G474xx -DUSE_HAL_DRIVER -DSTM32G474xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o g474_foc\util_pwm.o --omf_browse g474_foc\util_pwm.crf --depend g474_foc\util_pwm.d)
-I (USER\Utility\util_pwm.h)(0x680A4281)
-I (../Core/Inc/tim.h)(0x68D36468)
-I (../Core/Inc/main.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x680DF886)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Include/core_cm4.h)(0x680DF87B)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x680DF87B)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x680DF886)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_fdcan.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x680DF886)
-F (.\USER\Utility\util_spi.c)(0x680A4281)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM/USER -I ../MDK-ARM/USER/Utility -I ../MDK-ARM/USER/Main -I ./DSP_Lib -I ./DSP_Lib/Include -I ../MDK-ARM/USER/System -I ../MDK-ARM/USER/Peripheral -I ../MDK-ARM/USER/Algorithm -I ../MDK-ARM/USER/Library-I.\RTE\_G474_FOC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32G474xx -DUSE_HAL_DRIVER -DSTM32G474xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o g474_foc\util_spi.o --omf_browse g474_foc\util_spi.crf --depend g474_foc\util_spi.d)
-I (USER\Utility\util_spi.h)(0x680A4281)
-I (../Core/Inc/spi.h)(0x68D36468)
-I (../Core/Inc/main.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x680DF886)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Include/core_cm4.h)(0x680DF87B)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x680DF87B)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x680DF886)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_fdcan.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x680DF886)
-I (../Core/Inc/dma.h)(0x68D367E2)
-F (.\USER\configure.h)(0x68FB1DD9)()
-F (.\DSP_Lib\arm_cortexM4lf_math.lib)(0x680A4281)()
-F (.\USER\System\sys_dwt.c)(0x680A4281)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM/USER -I ../MDK-ARM/USER/Utility -I ../MDK-ARM/USER/Main -I ./DSP_Lib -I ./DSP_Lib/Include -I ../MDK-ARM/USER/System -I ../MDK-ARM/USER/Peripheral -I ../MDK-ARM/USER/Algorithm -I ../MDK-ARM/USER/Library-I.\RTE\_G474_FOC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32G474xx -DUSE_HAL_DRIVER -DSTM32G474xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o g474_foc\sys_dwt.o --omf_browse g474_foc\sys_dwt.crf --depend g474_foc\sys_dwt.d)
-I (USER\System\sys_dwt.h)(0x680A4281)
-I (../Core/Inc/main.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x680DF886)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Include/core_cm4.h)(0x680DF87B)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x680DF87B)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x680DF886)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_fdcan.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x680DF886)
-F (.\USER\Peripheral\drv8323_util.c)(0x68FA3E6B)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM/USER -I ../MDK-ARM/USER/Utility -I ../MDK-ARM/USER/Main -I ./DSP_Lib -I ./DSP_Lib/Include -I ../MDK-ARM/USER/System -I ../MDK-ARM/USER/Peripheral -I ../MDK-ARM/USER/Algorithm -I ../MDK-ARM/USER/Library-I.\RTE\_G474_FOC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32G474xx -DUSE_HAL_DRIVER -DSTM32G474xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o g474_foc\drv8323_util.o --omf_browse g474_foc\drv8323_util.crf --depend g474_foc\drv8323_util.d)
-I (USER\Peripheral\drv8323_util.h)(0x68FB1A43)
-I (../MDK-ARM/USER/configure.h)(0x68FB1DD9)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x680DF886)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Include/core_cm4.h)(0x680DF87B)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x680DF87B)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x680DF886)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_fdcan.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x680DF886)
-I (../Core/Inc/main.h)(0x68D36468)
-F (.\USER\Peripheral\mt6825_spi.c)(0x68FB4263)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM/USER -I ../MDK-ARM/USER/Utility -I ../MDK-ARM/USER/Main -I ./DSP_Lib -I ./DSP_Lib/Include -I ../MDK-ARM/USER/System -I ../MDK-ARM/USER/Peripheral -I ../MDK-ARM/USER/Algorithm -I ../MDK-ARM/USER/Library-I.\RTE\_G474_FOC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32G474xx -DUSE_HAL_DRIVER -DSTM32G474xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o g474_foc\mt6825_spi.o --omf_browse g474_foc\mt6825_spi.crf --depend g474_foc\mt6825_spi.d)
-I (USER\Peripheral\mt6825_spi.h)(0x68FB194C)
-I (../Core/Inc/main.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x680DF886)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Include/core_cm4.h)(0x680DF87B)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x680DF87B)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x680DF886)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_fdcan.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x680DF886)
-I (../MDK-ARM/USER/System/sys_dwt.h)(0x680A4281)
-I (../MDK-ARM/USER/Utility/util_gpio.h)(0x680A4281)
-I (../Core/Inc/gpio.h)(0x68D36467)
-I (../MDK-ARM/USER/Utility/util_spi.h)(0x680A4281)
-I (../Core/Inc/spi.h)(0x68D36468)
-I (../Core/Inc/dma.h)(0x68D367E2)
-I (../MDK-ARM/USER/Main/Foc_Control.h)(0x68FB17F7)
-I (../Core/Inc/tim.h)(0x68D36468)
-I (../MDK-ARM/USER/Algorithm/alg_pid.h)(0x680A4281)
-I (../MDK-ARM/USER/Library/lib_math.h)(0x680A4281)
-I (./DSP_Lib/Include/arm_math.h)(0x680A4281)
-I (./DSP_Lib/Include/core_cm4.h)(0x680A4281)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x57F606B6)
-I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
-I (../MDK-ARM/USER/Library/lib_filter.h)(0x680A4281)
-I (../MDK-ARM/USER/Peripheral/drv8323_util.h)(0x68FB1A43)
-I (../MDK-ARM/USER/configure.h)(0x68FB1DD9)
-I (./DSP_Lib/Include/arm_const_structs.h)(0x680A4281)
-I (./DSP_Lib/Include/arm_common_tables.h)(0x680A4281)
-I (../MDK-ARM/USER/Peripheral/mt6825_spi.h)(0x68FB194C)
-I (../MDK-ARM/USER/Main/Foc_Error.h)(0x68AC61B5)
-I (../MDK-ARM/USER/Main/Foc_Comm.h)(0x686125A3)
-I (../MDK-ARM/USER/Utility/util_fdcan.h)(0x686125A3)
-I (../Core/Inc/fdcan.h)(0x68D36467)
-I (../MDK-ARM/USER/Main/Init_music.h)(0x680A4281)
-I (../MDK-ARM/USER/Utility/util_adc.h)(0x68FA0AAA)
-I (../Core/Inc/adc.h)(0x68D36467)
-I (../MDK-ARM/USER/Algorithm/alg_swf.h)(0x686125A3)
-F (.\USER\Algorithm\alg_kf.c)(0x680A4281)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM/USER -I ../MDK-ARM/USER/Utility -I ../MDK-ARM/USER/Main -I ./DSP_Lib -I ./DSP_Lib/Include -I ../MDK-ARM/USER/System -I ../MDK-ARM/USER/Peripheral -I ../MDK-ARM/USER/Algorithm -I ../MDK-ARM/USER/Library-I.\RTE\_G474_FOC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32G474xx -DUSE_HAL_DRIVER -DSTM32G474xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o g474_foc\alg_kf.o --omf_browse g474_foc\alg_kf.crf --depend g474_foc\alg_kf.d)
-I (USER\Algorithm\alg_kf.h)(0x680A4281)
-I (../MDK-ARM/USER/Library/lib_math.h)(0x680A4281)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x680DF886)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Include/core_cm4.h)(0x680DF87B)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x680DF87B)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x680DF886)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_fdcan.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x680DF886)
-I (./DSP_Lib/Include/arm_math.h)(0x680A4281)
-I (./DSP_Lib/Include/core_cm4.h)(0x680A4281)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x57F606B6)
-I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
-F (.\USER\Algorithm\alg_pid.c)(0x681069E9)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM/USER -I ../MDK-ARM/USER/Utility -I ../MDK-ARM/USER/Main -I ./DSP_Lib -I ./DSP_Lib/Include -I ../MDK-ARM/USER/System -I ../MDK-ARM/USER/Peripheral -I ../MDK-ARM/USER/Algorithm -I ../MDK-ARM/USER/Library-I.\RTE\_G474_FOC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32G474xx -DUSE_HAL_DRIVER -DSTM32G474xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o g474_foc\alg_pid.o --omf_browse g474_foc\alg_pid.crf --depend g474_foc\alg_pid.d)
-I (USER\Algorithm\alg_pid.h)(0x680A4281)
-I (../MDK-ARM/USER/Library/lib_math.h)(0x680A4281)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x680DF886)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Include/core_cm4.h)(0x680DF87B)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x680DF87B)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x680DF886)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_fdcan.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x680DF886)
-I (./DSP_Lib/Include/arm_math.h)(0x680A4281)
-I (./DSP_Lib/Include/core_cm4.h)(0x680A4281)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x57F606B6)
-I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
-I (../MDK-ARM/USER/Library/lib_filter.h)(0x680A4281)
-F (.\USER\Algorithm\alg_qekf.c)(0x680A4281)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM/USER -I ../MDK-ARM/USER/Utility -I ../MDK-ARM/USER/Main -I ./DSP_Lib -I ./DSP_Lib/Include -I ../MDK-ARM/USER/System -I ../MDK-ARM/USER/Peripheral -I ../MDK-ARM/USER/Algorithm -I ../MDK-ARM/USER/Library-I.\RTE\_G474_FOC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32G474xx -DUSE_HAL_DRIVER -DSTM32G474xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o g474_foc\alg_qekf.o --omf_browse g474_foc\alg_qekf.crf --depend g474_foc\alg_qekf.d)
-I (USER\Algorithm\alg_qekf.h)(0x680A4281)
-I (USER\Algorithm\alg_kf.h)(0x680A4281)
-I (../MDK-ARM/USER/Library/lib_math.h)(0x680A4281)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x680DF886)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Include/core_cm4.h)(0x680DF87B)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x680DF87B)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x680DF886)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_fdcan.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x680DF886)
-I (./DSP_Lib/Include/arm_math.h)(0x680A4281)
-I (./DSP_Lib/Include/core_cm4.h)(0x680A4281)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x57F606B6)
-I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
-F (.\USER\Algorithm\alg_swf.c)(0x680EFB27)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM/USER -I ../MDK-ARM/USER/Utility -I ../MDK-ARM/USER/Main -I ./DSP_Lib -I ./DSP_Lib/Include -I ../MDK-ARM/USER/System -I ../MDK-ARM/USER/Peripheral -I ../MDK-ARM/USER/Algorithm -I ../MDK-ARM/USER/Library-I.\RTE\_G474_FOC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32G474xx -DUSE_HAL_DRIVER -DSTM32G474xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o g474_foc\alg_swf.o --omf_browse g474_foc\alg_swf.crf --depend g474_foc\alg_swf.d)
-I (USER\Algorithm\alg_swf.h)(0x686125A3)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (../MDK-ARM/USER/configure.h)(0x68FB1DD9)
-F (.\USER\Library\lib_buff.c)(0x680A4281)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM/USER -I ../MDK-ARM/USER/Utility -I ../MDK-ARM/USER/Main -I ./DSP_Lib -I ./DSP_Lib/Include -I ../MDK-ARM/USER/System -I ../MDK-ARM/USER/Peripheral -I ../MDK-ARM/USER/Algorithm -I ../MDK-ARM/USER/Library-I.\RTE\_G474_FOC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32G474xx -DUSE_HAL_DRIVER -DSTM32G474xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o g474_foc\lib_buff.o --omf_browse g474_foc\lib_buff.crf --depend g474_foc\lib_buff.d)
-I (USER\Library\lib_buff.h)(0x680A4281)
-I (../Core/Inc/main.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x680DF886)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Include/core_cm4.h)(0x680DF87B)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x680DF87B)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x680DF886)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_fdcan.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x680DF886)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
-F (.\USER\Library\lib_crc.c)(0x680A4281)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM/USER -I ../MDK-ARM/USER/Utility -I ../MDK-ARM/USER/Main -I ./DSP_Lib -I ./DSP_Lib/Include -I ../MDK-ARM/USER/System -I ../MDK-ARM/USER/Peripheral -I ../MDK-ARM/USER/Algorithm -I ../MDK-ARM/USER/Library-I.\RTE\_G474_FOC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32G474xx -DUSE_HAL_DRIVER -DSTM32G474xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o g474_foc\lib_crc.o --omf_browse g474_foc\lib_crc.crf --depend g474_foc\lib_crc.d)
-I (USER\Library\lib_crc.h)(0x680A4281)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x680DF886)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Include/core_cm4.h)(0x680DF87B)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x680DF87B)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x680DF886)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_fdcan.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x680DF886)
-F (.\USER\Library\lib_filter.c)(0x680A4281)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM/USER -I ../MDK-ARM/USER/Utility -I ../MDK-ARM/USER/Main -I ./DSP_Lib -I ./DSP_Lib/Include -I ../MDK-ARM/USER/System -I ../MDK-ARM/USER/Peripheral -I ../MDK-ARM/USER/Algorithm -I ../MDK-ARM/USER/Library-I.\RTE\_G474_FOC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32G474xx -DUSE_HAL_DRIVER -DSTM32G474xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o g474_foc\lib_filter.o --omf_browse g474_foc\lib_filter.crf --depend g474_foc\lib_filter.d)
-I (USER\Library\lib_filter.h)(0x680A4281)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x680DF886)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Include/core_cm4.h)(0x680DF87B)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x680DF87B)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x680DF886)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_fdcan.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x680DF886)
-I (USER\Library\lib_math.h)(0x680A4281)
-I (./DSP_Lib/Include/arm_math.h)(0x680A4281)
-I (./DSP_Lib/Include/core_cm4.h)(0x680A4281)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x57F606B6)
-I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
-F (.\USER\Library\lib_math.c)(0x680F0886)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM/USER -I ../MDK-ARM/USER/Utility -I ../MDK-ARM/USER/Main -I ./DSP_Lib -I ./DSP_Lib/Include -I ../MDK-ARM/USER/System -I ../MDK-ARM/USER/Peripheral -I ../MDK-ARM/USER/Algorithm -I ../MDK-ARM/USER/Library-I.\RTE\_G474_FOC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32G474xx -DUSE_HAL_DRIVER -DSTM32G474xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o g474_foc\lib_math.o --omf_browse g474_foc\lib_math.crf --depend g474_foc\lib_math.d)
-I (USER\Library\lib_math.h)(0x680A4281)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x680DF886)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x68D36468)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h)(0x680DF886)
-I (../Drivers/CMSIS/Include/core_cm4.h)(0x680DF87B)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x680DF87B)
-I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x680DF87B)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x680DF886)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_fdcan.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x680DF886)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x680DF886)
-I (./DSP_Lib/Include/arm_math.h)(0x680A4281)
-I (./DSP_Lib/Include/core_cm4.h)(0x680A4281)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x57F606B6)
-I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
