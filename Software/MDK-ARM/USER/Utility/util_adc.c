@@ -38,7 +38,7 @@ void Get_ADC_Value(void)
 }
 
 
-void Adc_Val_Decode()
+void Adc_Val_Decode(void)
 {
 #if ADC_FILTER_MODE == MODE_OFF
 	for(int i = ADC1_INJECTED_MODE_CH; i < ADC1_CHANNEL_NUM; i++)
@@ -53,6 +53,7 @@ void Adc_Val_Decode()
 #endif
 	
 	Motor_ADC.Valtage_VCC = Adc_Sum_Val[VCC_ADC_CHANNEL] * 11;
+	Motor_ADC.Valtage_NTC = Adc_Sum_Val[NTC_ADC_CHANNEL];
 	Motor_ADC.Temperature = (Adc_Sum_Val[TEMP_ADC_CHANNEL] - 0.76f) * 400 + 2;
 	Motor_ADC.Internal_Vref = Adc_Sum_Val[VREF_ADC_CHANNEL];
 }
@@ -138,6 +139,6 @@ void ADC_Struct_Init(ADC_Struct *adc)
     adc->Valtage_VCC = 0;
     adc->Temperature = 0;
     adc->Internal_Vref = 0;
-		adc->Vref_Offset = 1.0f;
+	adc->Vref_Offset = 1.0f;
 }
 

@@ -143,7 +143,7 @@ void Check_Task_Freq(void)
 {
     task_freq = (DWT_GetTimeline_us() - tick_last) / 1000.0f;
     tick_last = DWT_GetTimeline_us();
-    if (task_freq > 1.2)
+    if (task_freq > 1.2f)
         big_num++;
     else
         small_num++;

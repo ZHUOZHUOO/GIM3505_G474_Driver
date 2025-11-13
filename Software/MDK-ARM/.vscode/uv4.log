@@ -12,7 +12,7 @@ Feature(s) : FlashBP, GDB
 * JLink Info: InitTarget() start
 * JLink Info: SWD selected. Executing JTAG -> SWD switching sequence.
 * JLink Info: DAP initialized successfully.
-* JLink Info: InitTarget() end - Took 10.5ms
+* JLink Info: InitTarget() end - Took 11.2ms
 * JLink Info: Found SW-DP with ID 0x2BA01477
 * JLink Info: DPIDR: 0x2BA01477
 * JLink Info: CoreSight SoC-400 or earlier
@@ -40,8 +40,8 @@ ROMTableAddr = 0xE00FF000
 Target info:
 ------------
 Device: STM32G474CETx
-VTarget = 3.336V
-State of Pins: TCK: 0, TDI: 0, TDO: 0, TMS: 1, TRES: 0, TRST: 255
+VTarget = 3.327V
+State of Pins: TCK: 0, TDI: 0, TDO: 0, TMS: 1, TRES: 1, TRST: 255
 Hardware-Breakpoints: 6
 Software-Breakpoints: 8192
 Watchpoints:          4
@@ -49,5 +49,5 @@ JTAG speed: 4000 kHz
 
 * JLink Info: Memory map 'after startup completion point' is active
 Erase Done.Programming Done.Verify OK.* JLink Info: OnDisconnectTarget() start
-* JLink Info: OnDisconnectTarget() end - Took 655us
-Flash Load finished at 15:33:52
+* JLink Info: OnDisconnectTarget() end - Took 1.02ms
+Flash Load finished at 13:38:29

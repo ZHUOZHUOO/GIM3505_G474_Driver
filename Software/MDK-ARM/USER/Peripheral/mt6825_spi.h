@@ -1,3 +1,10 @@
+/*
+ * @Date: 2025-10-23 21:19:19
+ * @LastEditors: ZHUOZHUOO
+ * @LastEditTime: 2025-11-05 22:39:04
+ * @FilePath: \Software\MDK-ARM\USER\Peripheral\mt6825_spi.h
+ * @Description: Do not edit
+ */
 /**
  * @file periph_encoder_spi.h
  * @author Star_Plucking
@@ -24,30 +31,36 @@ extern "C" {
 #include "alg_swf.h"
 
 typedef struct {
-  SPI_HandleTypeDef *hspi;
-  GPIO_TypeDef *cs_port;
-  uint16_t cs_pin;
+    SPI_HandleTypeDef *hspi;
+    GPIO_TypeDef *cs_port;
+    uint16_t cs_pin;
 
-  uint32_t last_update_time; // 上次更新时间
-  int16_t multi_turn;        // 当前多圈数
-  int16_t last_multi_turn;   // 上一次的多圈数
-  float rawAngle;
-  float last_rawAngle;
-  float rawAngle_diff;
+    uint32_t last_update_time;  // 上次更新时间
+    int16_t multi_turn;         // 当前多圈数
+    int16_t last_multi_turn;    // 上一次的多圈数
+    float rawAngle;
+    float last_rawAngle;
+    float rawAngle_diff;
 
-  float last_angle;        	 // 上一次的角度
-  SlidingWindowFilter *angle_filter;
-  float *angle_buffer;
+    float last_angle;        	// 上一次的角度
+    SlidingWindowFilter *angle_filter;
+    float *angle_buffer;
 
-  float angle_diff;          // 角度差值
-	SlidingWindowFilter *angle_diff_Filter;
-	float *angle_diff_buffer;
+    float angle_diff;           // 角度差值
+    SlidingWindowFilter *angle_diff_Filter;
+    float *angle_diff_buffer;
 
-  int32_t turns;             // 累计圈数
-  float angular_speed;       // 角速度 (rad/s)
-  float linear_speed;        // 线速度 (m/s)
-  float radius;              // 半径 (m)
-  uint8_t rx_buffer[4];
+    int32_t turns;              // 累计圈数
+    float angular_speed;        // 角速度 (rad/s)
+    float last_angular_speed;   // 上次角速度 (rad/s)
+    float linear_speed;         // 线速度 (m/s)
+    float radius;               // 半径 (m)
+
+    float acc;                  // 加速度 (rad/s²)
+    SlidingWindowFilter *acc_filter;
+    float *acc_buffer;
+
+    uint8_t rx_buffer[3];
 
 } Encoder_SPI_HandleTypeDef;
 
@@ -56,12 +69,15 @@ extern SlidingWindowFilter MT6825_diff_Filter;
 extern float MT6825_diff_buffer[DIFF_SLIDING_WINDOW_SIZE];
 extern SlidingWindowFilter MT6825_angle_Filter;
 extern float MT6825_angle_buffer[ANGLE_SLIDING_WINDOW_SIZE];
+extern SlidingWindowFilter MT6825_acc_Filter;
+extern float MT6825_acc_buffer[ACC_SLIDING_WINDOW_SIZE];
 
-void Encoder_SPI_Init(Encoder_SPI_HandleTypeDef *encoder,
-											SlidingWindowFilter *diff_filter,float *diff_buffer,
-                      SlidingWindowFilter *angle_filter,float *angle_buffer,
-                      SPI_HandleTypeDef *hspi, GPIO_TypeDef *cs_port,
-                      uint16_t cs_pin, float radius);
+void Encoder_SPI_Init(  Encoder_SPI_HandleTypeDef *encoder,
+                        SlidingWindowFilter *diff_filter,float *diff_buffer,
+                        SlidingWindowFilter *angle_filter,float *angle_buffer,
+                        SlidingWindowFilter *acc_filter,float *acc_buffer,
+                        SPI_HandleTypeDef *hspi, GPIO_TypeDef *cs_port,
+                        uint16_t cs_pin, float radius);
 
 void Encoder_SPI_Data_Process(Encoder_SPI_HandleTypeDef *encoder,
                               uint8_t *buffer);
@@ -71,6 +87,8 @@ void Encoder_SPI_Reset(Encoder_SPI_HandleTypeDef *encoder);
 float Encoder_SPI_Get_Angle(Encoder_SPI_HandleTypeDef *encoder);
 
 float Encoder_SPI_Get_Angular_Speed(Encoder_SPI_HandleTypeDef *encoder);
+
+float Encoder_SPI_Get_Angular_Acc(Encoder_SPI_HandleTypeDef *encoder);
 
 void Encoder_Read_Reg(Encoder_SPI_HandleTypeDef *encoder);
 

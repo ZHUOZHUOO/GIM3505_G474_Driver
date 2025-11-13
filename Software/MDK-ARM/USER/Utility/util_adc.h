@@ -12,10 +12,10 @@ extern "C"
 #include "Foc_Control.h"
 
 	
-#define ADC1_CHANNEL_NUM  6
+#define ADC1_CHANNEL_NUM  (ADC1_INJECTED_MODE_CH + ADC1_REGULAR_MODE_CH)
 	
-//---ADC REGULAR_MODE_CH---//
-#define ADC1_REGULAR_MODE_CH 3
+//---ADC INJECTED_MODE_CH---//
+#define ADC1_INJECTED_MODE_CH 3
 	
 #if 	THREE_PHASE_LINE_SEQUENCCE == A_B_C
 	#define CURRENT_A_ADC_CHANNEL  0
@@ -26,17 +26,16 @@ extern "C"
 	#define CURRENT_B_ADC_CHANNEL  2
 	#define CURRENT_C_ADC_CHANNEL  1
 #endif
+//---ADC INJECTED_MODE_CH---//
+	
 //---ADC REGULAR_MODE_CH---//
+#define ADC1_REGULAR_MODE_CH 4
 
-
-//---ADC INJECTED_MODE_CH---//
-#define ADC1_INJECTED_MODE_CH 4
-
-#define VCC_ADC_CHANNEL  3
+#define VCC_ADC_CHANNEL  	3
 #define NTC_ADC_CHANNEL		4
-#define TEMP_ADC_CHANNEL  5
-#define VREF_ADC_CHANNEL  6
-//---ADC INJECTED_MODE_CH---//
+#define TEMP_ADC_CHANNEL  	5
+#define VREF_ADC_CHANNEL  	6
+//---ADC REGULAR_MODE_CH---//
 
 typedef struct 
 {
@@ -56,5 +55,6 @@ extern ADC_Struct Motor_ADC;
 void Adc_Init(void);
 void ADC_Vrefint_Init(void);
 void Get_ADC_Value(void);
+void Adc_Val_Decode(void);
 
 #endif

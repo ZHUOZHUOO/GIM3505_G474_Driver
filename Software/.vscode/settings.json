@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "mt6825_spi.h": "c",
+        "foc_comm.h": "c",
+        "foc_error.h": "c"
+    }
+}

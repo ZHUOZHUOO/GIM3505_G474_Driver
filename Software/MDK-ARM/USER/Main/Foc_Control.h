@@ -27,8 +27,8 @@
 #define TWO_DIV_SQRT3   (float)1.1547005383793
 
 //SVPWM_SETTING
-#define T_2		    (PWM_PERIOD * 4)   //TIM1 ARR值的4倍
-#define T		    (PWM_PERIOD * 2)   //TIM1 ARR值的2倍
+#define T_2		    (PWM_PREIOD * 4)   //TIM1 ARR值的4倍
+#define T		    (PWM_PREIOD * 2)   //TIM1 ARR值的2倍
 #define T_SQRT3   	(uint16_t)(T * SQRT3)
 #define SECTOR_1	(uint8_t)1
 #define SECTOR_2	(uint8_t)2
@@ -39,10 +39,8 @@
 
 typedef enum
 {
-    Speed_Open_Loop = 0,
-    Speed_Mode = 2,
-    Position_Mode = 3,
-    Force_Mode = 4
+    Position_Mode = 2,
+    Force_Mode = 3
 }Close_Loop_Mode_t;
  
 typedef struct
@@ -70,12 +68,15 @@ typedef struct
 
     float Theta;//机械角度_反馈
     float Theta_Ref;//机械角度_期望
+    float Theta_Exp_Comm;//机械角度_期望_通讯
     float ElecTheta;//电角度_反馈
-		float ElecTheta_Offset;
-    float Open_Loop_Theta;//开环角度_ref
-    
-    float Speed_Rpm;//速度
+	float ElecTheta_Offset;
+
+    float Speed_Rpm;//速度反馈
     float Speed_Rpm_Ref;//期望速度
+
+    float Iq_Damping;//电流阻尼值
+    float K_Damping;//阻尼系数
 
     Close_Loop_Mode_t Motor_Close_Loop_Mode;
 } FOC_Struct;
@@ -96,7 +97,7 @@ extern FOC_Running_Struct Motor_Run;
 
 extern PID_TypeDef Current_Id_PID;
 extern PID_TypeDef Current_Iq_PID;
-extern PID_TypeDef Speed_PID;
+extern PID_TypeDef Position_Comm_PID;
 extern PID_TypeDef Position_PID;
 
 void FOC_Struct_Init(FOC_Struct *foc);
