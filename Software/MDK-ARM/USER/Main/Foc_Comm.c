@@ -1,6 +1,6 @@
 #include "Foc_Comm.h"
 
-FOC_Comm_Struct Motor_Comm = {0, 0, &hfdcan1, {0}, {0}, FOC_Comm_Timeout};
+FOC_Comm_Struct Motor_Comm = {0, 0, &hfdcan1, {0}, {0}, FOC_Comm_Timeout, FOC_Comm_Shutdown};
 
 void FDCAN_IntFilterAndStart(void) {
 	FDCAN_FilterTypeDef sFilterConfig;
@@ -27,7 +27,7 @@ void FDCAN_IntFilterAndStart(void) {
 		FDCAN_ErrorHandler();
 	}
 	if (HAL_FDCAN_ActivateNotification(&hfdcan1, FDCAN_IT_BUS_OFF, 0) != HAL_OK) 
-	{ 
+	{
 		FDCAN_ErrorHandler(); 
 	}
 }
@@ -36,7 +36,7 @@ void FOC_Comm_TxData_Encoder(uint32_t cmd, uint8_t *txdata)
 {
     // Encode the data to be transmitted
 	if(cmd == CMD_THETA_CURRENT_FDB)
-	{	
+	{
 		txdata[0] = *((uint8_t *)&Motor_FOC.Theta);
     	txdata[1] = *((uint8_t *)&Motor_FOC.Theta + 1);
     	txdata[2] = *((uint8_t *)&Motor_FOC.Theta + 2);
@@ -51,10 +51,9 @@ void FOC_Comm_TxData_Encoder(uint32_t cmd, uint8_t *txdata)
 		txdata[0] = Motor_Error.SAFETY_STATE |
 					Motor_Error.OVER_VOLTAGE_STATE << 1 |
 					Motor_Error.UNDER_VOLTAGE_STATE << 2 |
-					Motor_Error.OVER_CURRENT_STATE << 3 |
-					Motor_Error.OVER_SPEED_STATE << 4 |
-					Motor_Error.OVER_TEMPERATURE_STATE << 5 |
-					Motor_Error.DRV8323_ERROR_STATE << 6;
+					Motor_Error.OVER_TEMPERATURE_STATE << 3 |
+					Motor_Error.DRV8323_ERROR_STATE << 4 |
+                    Motor_FOC.Motor_Output_Mode << 5;
 	}
 	else if(cmd == CMD_IQ_PID_FDB)
 	{
@@ -197,9 +196,31 @@ void FOC_Comm_Handler(uint32_t cmd, uint8_t *rxdata)
     else if(cmd == CMD_MOTOR_ENABLE)
     {
         uint8_t enable_flag = *(uint8_t*)(rxdata);
-        if(enable_flag)
-        {}
+        if(enable_flag == ENABLE_MOTOR)//0x91
+        {
+            Motor_Comm.FOC_Comm_Shutdown = FOC_Comm_Running;
+        }
+        else if(enable_flag == SHUTDOWN_MOTOR)//0x78
+        {
+            Motor_Comm.FOC_Comm_Shutdown = FOC_Comm_Shutdown;
+        }
+        uint8_t txdata[1];
+        FOC_Comm_TxData_Encoder(CMD_ERROR_FDB, txdata);
+        FDCAN_SendMessageWithBaudSwitch(&hfdcan1, txdata, FDCAN_DLC_BYTES_1, Tx_Master_ID | CMD_ERROR_FDB);
     }
+}
+
+void FOC_Comm_State_Updata(void)
+{
+	Motor_Comm.now_time = HAL_GetTick();
+	if(Motor_Comm.now_time - Motor_Comm.last_comm_time < FOC_COMM_TIMEOUT_MS)
+	{
+		Motor_Comm.FOC_Comm_Status = FOC_Comm_OK;
+	}
+	else
+	{
+		Motor_Comm.FOC_Comm_Status = FOC_Comm_Timeout;
+	}
 }
 
 void HAL_FDCAN_RxFifo0Callback(FDCAN_HandleTypeDef *hfdcan, uint32_t RxFifo0ITs)
@@ -215,15 +236,6 @@ void HAL_FDCAN_RxFifo0Callback(FDCAN_HandleTypeDef *hfdcan, uint32_t RxFifo0ITs)
 			{
 				case Rx_Master_ID:
                     Motor_Comm.last_comm_time = Motor_Comm.now_time;
-                    Motor_Comm.now_time = HAL_GetTick();
-                    if(Motor_Comm.now_time - Motor_Comm.last_comm_time < FOC_COMM_TIMEOUT_MS)
-                    {
-                        Motor_Comm.FOC_Comm_Status = FOC_Comm_OK;
-                    }
-                    else
-                    {
-                        Motor_Comm.FOC_Comm_Status = FOC_Comm_Timeout;
-                    }
 					FOC_Comm_Handler(cmd, Motor_Comm.RxData);
 					break;
 				default: break;

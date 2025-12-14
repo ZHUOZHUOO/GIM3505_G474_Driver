@@ -1,7 +1,7 @@
 /*
  * @Date: 2025-02-27 19:16:35
  * @LastEditors: ZHUOZHUOO
- * @LastEditTime: 2025-11-13 14:03:41
+ * @LastEditTime: 2025-11-13 22:39:33
  * @FilePath: \Software\MDK-ARM\USER\Main\Foc_Comm.h
  * @Description: Do not edit
  */
@@ -16,11 +16,11 @@
 
 //-----------FDCAN Mask Setting---------------//
 
-#define FILTER_ID_1     0x500
-#define FILTER_ID_2     0x7F0
-#define DEVICE_ID_MASK  0x7F0
-#define DEVICE_ID_NOMASK 0xFFF
-#define CMD_MASK        0x00F
+#define FILTER_ID_1         0x500
+#define FILTER_ID_2         0x7F0
+#define DEVICE_ID_MASK      0x7F0
+#define DEVICE_ID_NOMASK    0xFFF
+#define CMD_MASK            0x00F
 
 //-----------FDCAN Command Setting------------//
 
@@ -40,11 +40,21 @@
 
 #define FOC_COMM_TIMEOUT_MS    100
 
+//--------------FOC Shutdown Enum---------------//
+#define SHUTDOWN_MOTOR       0x78
+#define ENABLE_MOTOR         0x91
+
 typedef enum
 {
-    FOC_Comm_OK = 0,
-    FOC_Comm_Timeout = 1
+    FOC_Comm_Timeout = 0,
+    FOC_Comm_OK = 1
 } FOC_Comm_Status_t;
+
+typedef enum
+{
+    FOC_Comm_Shutdown = 0,
+    FOC_Comm_Running = 1
+} FOC_Comm_Shutdown_t;
 
 typedef struct
 {
@@ -56,8 +66,13 @@ typedef struct
     FDCAN_RxHeaderTypeDef RxHeader;
 
     FOC_Comm_Status_t FOC_Comm_Status;
+    FOC_Comm_Shutdown_t FOC_Comm_Shutdown;
 } FOC_Comm_Struct;
 
+extern FOC_Comm_Struct Motor_Comm;
+
 void FDCAN_IntFilterAndStart(void);
+void FOC_Comm_TxData_Encoder(uint32_t cmd, uint8_t *txdata);
+void FOC_Comm_State_Updata(void);
 
 #endif

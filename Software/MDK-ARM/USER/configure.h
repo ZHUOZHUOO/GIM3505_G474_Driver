@@ -1,7 +1,7 @@
 /*
  * @Date: 2025-03-09 20:13:14
  * @LastEditors: ZHUOZHUOO
- * @LastEditTime: 2025-11-05 22:25:28
+ * @LastEditTime: 2025-11-19 19:38:46
  * @FilePath: \Software\MDK-ARM\USER\configure.h
  * @Description: Do not edit
  */
@@ -9,7 +9,7 @@
 #define __CONFIGURE_H
 
 //-----------FDCAN ID Setting------------//
-#define WHO_AM_I Slave_0_Arm_ID
+#define WHO_AM_I Slave3_Jaw_ID
 
 #define Tx_Master_ID 	WHO_AM_I | 0x100
 #define Rx_Master_ID 	WHO_AM_I
@@ -17,7 +17,12 @@
 #define Master_ID 			0x410
 #define Slave_Upper_Arm_ID 	0x420
 #define Slave_Fore_Arm_ID 	0x430
-#define Slave_0_Arm_ID 		0x440
+#define Slave_Test_ID 		0x440
+#define Slave0_Jaw_ID 	    0x450
+#define Slave1_Jaw_ID 	    0x460
+#define Slave2_Jaw_ID 	    0x470
+#define Slave3_Jaw_ID 	    0x480
+
 
 //-----------Mode Setting--------------//
 

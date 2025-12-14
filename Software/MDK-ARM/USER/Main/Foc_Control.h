@@ -42,6 +42,12 @@ typedef enum
     Position_Mode = 2,
     Force_Mode = 3
 }Close_Loop_Mode_t;
+
+typedef enum
+{
+    FOC_Shutdown_Mode = 0,
+    FOC_Running_Mode = 1
+}FOC_Output_Mode_t;
  
 typedef struct
 {
@@ -79,6 +85,7 @@ typedef struct
     float K_Damping;//阻尼系数
 
     Close_Loop_Mode_t Motor_Close_Loop_Mode;
+    FOC_Output_Mode_t Motor_Output_Mode;
 } FOC_Struct;
 
 typedef struct 

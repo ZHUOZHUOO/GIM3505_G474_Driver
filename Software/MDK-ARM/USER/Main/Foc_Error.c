@@ -1,18 +1,17 @@
 /*
  * @Date: 2025-02-27 19:16:35
  * @LastEditors: ZHUOZHUOO
- * @LastEditTime: 2025-11-13 16:55:53
+ * @LastEditTime: 2025-11-19 15:45:18
  * @FilePath: \Software\MDK-ARM\USER\Main\Foc_Error.c
  * @Description: Do not edit
  */
 #include "Foc_Error.h"
 
-ERROR_Struct Motor_Error = {1, 1, 1, 1, 1, 1, {0, 0, 0, 0, 0, 0}};
+ERROR_Struct Motor_Error = {1, 1, 1, 1, 1, {0, 0, 0, 0, 0}};
 
 void Error_Struct_Init(ERROR_Struct *error)
 {
     error->SAFETY_STATE = 1;
-
     error->OVER_VOLTAGE_STATE = 1;
     error->UNDER_VOLTAGE_STATE = 1;
     error->OVER_TEMPERATURE_STATE = 1;
@@ -31,15 +30,10 @@ void FOC_Error_Handler(void)
                                 Motor_Error.OVER_TEMPERATURE_STATE & Motor_Error.DRV8323_ERROR_STATE;
     
     if(Motor_Error.SAFETY_STATE){return;}
-
-    TIM1->CCR1 = 0;
-    TIM1->CCR2 = 0;
-    TIM1->CCR3 = 0;
-
-    while (1)
-    {
-        HAL_GPIO_TogglePin(LED_PORT, LED_Pin);
-        HAL_Delay(50);
+    else {
+        uint8_t txdata[1];
+        FOC_Comm_TxData_Encoder(CMD_ERROR_FDB, txdata);
+        FDCAN_SendMessageWithBaudSwitch(&hfdcan1, txdata, FDCAN_DLC_BYTES_1, Tx_Master_ID | CMD_ERROR_FDB);
     }
 #endif
 }
@@ -52,7 +46,7 @@ void Error_Main_Loop(void)
     Motor_Error.STATE_WINDOW.DRV8323_Error_State_Window <<= 1;
 
 	// Check over voltage
-    else if(Motor_ADC.Valtage_VCC > VOLTAGE_MAX)
+    if(Motor_ADC.Valtage_VCC > VOLTAGE_MAX)
     {
         Motor_Error.STATE_WINDOW.OVER_VOLTAGE_STATE_WINDOW |= 1;
         if(Motor_Error.STATE_WINDOW.OVER_VOLTAGE_STATE_WINDOW == 0xFF)
@@ -61,7 +55,7 @@ void Error_Main_Loop(void)
         }
     }
     // Check under voltage
-    else if(Motor_ADC.Valtage_VCC < VOLTAGE_MIN)
+    if(Motor_ADC.Valtage_VCC < VOLTAGE_MIN)
     {
         Motor_Error.STATE_WINDOW.UNDER_VOLTAGE_STATE_WINDOW |= 1;
         if(Motor_Error.STATE_WINDOW.UNDER_VOLTAGE_STATE_WINDOW == 0xFF)
@@ -70,7 +64,7 @@ void Error_Main_Loop(void)
         }
     }
     // Check over temperature
-    else if(Motor_ADC.Valtage_NTC < TEMPERATURE_MAX)
+    if(Motor_ADC.Valtage_NTC < TEMPERATURE_MAX)
     {
         Motor_Error.STATE_WINDOW.OVER_TEMPERATURE_STATE_WINDOW |= 1;
         if(Motor_Error.STATE_WINDOW.OVER_TEMPERATURE_STATE_WINDOW == 0xFF)
@@ -78,9 +72,8 @@ void Error_Main_Loop(void)
             Motor_Error.OVER_TEMPERATURE_STATE = 0;
         }
     }
-#if N_FAULT_MODE == MODE_OFF
     //Check DRV8323 nFault Pin
-    else if (HAL_GPIO_ReadPin(nFault_GPIO_Port, nFault_Pin) == GPIO_PIN_RESET)
+    if (HAL_GPIO_ReadPin(nFault_GPIO_Port, nFault_Pin) == GPIO_PIN_RESET)
     {
         Motor_Error.STATE_WINDOW.DRV8323_Error_State_Window |= 1;
         if(Motor_Error.STATE_WINDOW.DRV8323_Error_State_Window == 0xFF)
@@ -88,19 +81,16 @@ void Error_Main_Loop(void)
             Motor_Error.DRV8323_ERROR_STATE = 0;
         }
     }
-#endif
 		
 	FOC_Error_Handler();
 }
 
 // DRV8323_nFault_Interrupt
-void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
-{
-    if(GPIO_Pin == nFault_Pin)
-    {
-    #if N_FAULT_MODE == MODE_ON
-        Motor_Error.DRV8323_ERROR_STATE = 0;
-        FOC_Error_Handler();
-    #endif
-    }
-}
+// void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+// {
+//     if(GPIO_Pin == nFault_Pin)
+//     {
+//         Motor_Error.DRV8323_ERROR_STATE = 0;
+//         FOC_Error_Handler();
+//     }
+// }

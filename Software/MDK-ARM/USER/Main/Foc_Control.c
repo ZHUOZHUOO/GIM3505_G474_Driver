@@ -1,7 +1,7 @@
 /*
  * @Date: 2025-02-26 18:25:59
  * @LastEditors: ZHUOZHUOO
- * @LastEditTime: 2025-11-06 13:42:32
+ * @LastEditTime: 2025-11-23 19:35:02
  * @FilePath: \Software\MDK-ARM\USER\Main\Foc_Control.c
  * @Description: Do not edit
  */
@@ -24,24 +24,28 @@ PID_TypeDef Position_PID;
 //===========Elec_Theta_Zero_Point==========//
 #if WHO_AM_I == Slave_Upper_Arm_ID
 	#define Elec_Theta_Zero_Point 1.0f
-	#define Default_Theta_Ref -1065.5f
-	#define Trans_Polar -1	//机械传动极性
-	//Trans_Polar =  1 ：扭矩方向与位移方向相同 （如同步带传动）
-	//Trans_Polar = -1 ：扭矩方向与位移方向相反	（如使用定子为旋转体）
     #define K_Damping_Default 0.0001f
 #elif WHO_AM_I == Slave_Fore_Arm_ID
-	#define Elec_Theta_Zero_Point -0.5f
-	#define Default_Theta_Ref -5.5f 
-	#define Trans_Polar 1
+	#define Elec_Theta_Zero_Point 2.64f
     #define K_Damping_Default 0.0001f
-#elif WHO_AM_I == Slave_0_Arm_ID
-	#define Elec_Theta_Zero_Point 1.8f
-	#define Default_Theta_Ref -5.5f
-	#define Trans_Polar 1
+#elif WHO_AM_I == Slave_Test_ID
+	#define Elec_Theta_Zero_Point 2.4f
+    #define K_Damping_Default 0.00001f
+#elif WHO_AM_I == Slave0_Jaw_ID
+	#define Elec_Theta_Zero_Point 5.54f
+    #define K_Damping_Default 0.00001f
+#elif WHO_AM_I == Slave1_Jaw_ID
+	#define Elec_Theta_Zero_Point 3.0f
+    #define K_Damping_Default 0.00001f
+#elif WHO_AM_I == Slave2_Jaw_ID
+	#define Elec_Theta_Zero_Point 4.14f
+    #define K_Damping_Default 0.00001f
+#elif WHO_AM_I == Slave3_Jaw_ID
+	#define Elec_Theta_Zero_Point 5.14f
     #define K_Damping_Default 0.00001f
 #endif
 
-#define Position_Polar (Trans_Polar * MOTOR_ENCODER_DIR)
+#define Position_Polar (MOTOR_ENCODER_DIR)
 
 static float inv_motor_voltage;
 //static float sqrt3_inv_mv;
@@ -105,20 +109,25 @@ void CALC_SVPWM(float Valpha, float Vbeta) {
     uint16_t hTimePhB = (uint16_t)times[order[1]];
     uint16_t hTimePhC = (uint16_t)times[order[2]];
 
-		// 更新寄存器
-    #if 	THREE_PHASE_LINE_SEQUENCCE == A_B_C
-	TIM1->CCR1 = hTimePhA;
-	TIM1->CCR2 = hTimePhB;
-	TIM1->CCR3 = hTimePhC;
-    #elif 	THREE_PHASE_LINE_SEQUENCCE == A_C_B
-	TIM1->CCR1 = hTimePhA;
-	TIM1->CCR2 = hTimePhC;
-	TIM1->CCR3 = hTimePhB;
-    #endif
-		
-//	TIM1->CCR1 = 0;
-//	TIM1->CCR2 = 0;
-//	TIM1->CCR3 = 0;
+    if(Motor_FOC.Motor_Output_Mode == FOC_Running_Mode)
+    {
+        // 更新寄存器
+        #if 	THREE_PHASE_LINE_SEQUENCCE == A_B_C
+        TIM1->CCR1 = hTimePhA;
+        TIM1->CCR2 = hTimePhB;
+        TIM1->CCR3 = hTimePhC;
+        #elif 	THREE_PHASE_LINE_SEQUENCCE == A_C_B
+        TIM1->CCR1 = hTimePhA;
+        TIM1->CCR2 = hTimePhC;
+        TIM1->CCR3 = hTimePhB;
+        #endif
+    }
+    else if(Motor_FOC.Motor_Output_Mode == FOC_Shutdown_Mode)
+    {
+        TIM1->CCR1 = 0;
+        TIM1->CCR2 = 0;
+        TIM1->CCR3 = 0;
+    }
 		
     // 保存到结构体
     Motor_FOC.hTimePhA = hTimePhA;
@@ -181,7 +190,7 @@ void FOC_Struct_Init(FOC_Struct *foc)
     foc->Speed_Rpm = 0;
     foc->Theta = 0;
     foc->Theta_Ref = 0.0f;
-    foc->Theta_Exp_Comm = Default_Theta_Ref / 360.0f * TWO_PI;
+    foc->Theta_Exp_Comm = 0.0f;
     foc->ElecTheta = 0;
 	foc->ElecTheta_Offset = Elec_Theta_Zero_Point;
 
@@ -193,6 +202,7 @@ void FOC_Struct_Init(FOC_Struct *foc)
     foc->K_Damping = K_Damping_Default;
 
     foc->Motor_Close_Loop_Mode = (Close_Loop_Mode_t) FOC_CLOSE_LOOP_MODE;
+    foc->Motor_Output_Mode = (FOC_Output_Mode_t) FOC_Shutdown_Mode;
 }
 
 void FOC_PID_Init(void)
@@ -209,11 +219,31 @@ void FOC_PID_Init(void)
 		PID_Init(&Current_Iq_PID, PID_DELTA, 1.5f, 0.2f, 0.00f, 0.0f, 0.0f, 5.8f, 0.2f, 0.1f, 0.1f, 0.1f);
 		PID_Init(&Position_Comm_PID, PID_DELTA, 0.0f, 0.002f, 0.0f, 0.0f, 0.0f, 100.0f, 0.01f, 0.1f, 0.1f, 0.1f);
 		PID_Init(&Position_PID, PID_POSITION, 1.2f, 0.0005f, 0.003f, 0.0f, 0.0f, 500.0f, 0.9f, 0.1f, 0.1f, 0.1f);
-		#elif WHO_AM_I == Slave_0_Arm_ID
-		PID_Init(&Current_Id_PID, PID_DELTA, 4.5f, 0.3f, 0.00f, 0.0f, 0.0f, 50.0f, 0.5f, 0.1f, 0.1f, 0.1f);
-		PID_Init(&Current_Iq_PID, PID_DELTA, 3.5f, 0.2f, 0.00f, 0.0f, 0.0f, 15.8f, 0.5f, 0.1f, 0.1f, 0.1f);
-		PID_Init(&Position_Comm_PID, PID_DELTA, 0.0f, 0.02f, 0.0f, 0.0f, 0.0f, 100.0f, 0.03f, 0.1f, 0.1f, 0.1f);
-		PID_Init(&Position_PID, PID_POSITION, 5.2f, 0.002f, 0.003f, 0.0f, 0.0f, 2.0f, 1.6f, 0.1f, 0.1f, 0.1f);
+		#elif WHO_AM_I == Slave_Test_ID
+		PID_Init(&Current_Id_PID, PID_DELTA, 1.5f, 0.3f, 0.00f, 0.0f, 0.0f, 20.0f, 0.2f, 0.1f, 0.1f, 0.1f);
+		PID_Init(&Current_Iq_PID, PID_DELTA, 1.5f, 0.2f, 0.00f, 0.0f, 0.0f, 5.8f, 0.2f, 0.1f, 0.1f, 0.1f);
+		PID_Init(&Position_Comm_PID, PID_DELTA, 0.0f, 0.002f, 0.0f, 0.0f, 0.0f, 100.0f, 0.01f, 0.1f, 0.1f, 0.1f);
+		PID_Init(&Position_PID, PID_POSITION, 2.0f, 0.0008f, 0.003f, 0.0f, 0.0f, 500.0f, 0.9f, 0.1f, 0.1f, 0.1f);
+		#elif WHO_AM_I == Slave0_Jaw_ID
+		PID_Init(&Current_Id_PID, PID_DELTA, 1.5f, 0.3f, 0.00f, 0.0f, 0.0f, 20.0f, 0.2f, 0.1f, 0.1f, 0.1f);
+		PID_Init(&Current_Iq_PID, PID_DELTA, 1.5f, 0.2f, 0.00f, 0.0f, 0.0f, 5.8f, 0.2f, 0.1f, 0.1f, 0.1f);
+		PID_Init(&Position_Comm_PID, PID_DELTA, 0.0f, 0.002f, 0.0f, 0.0f, 0.0f, 100.0f, 0.01f, 0.1f, 0.1f, 0.1f);
+		PID_Init(&Position_PID, PID_POSITION, 2.0f, 0.0008f, 0.003f, 0.0f, 0.0f, 500.0f, 0.9f, 0.1f, 0.1f, 0.1f);
+		#elif WHO_AM_I == Slave1_Jaw_ID
+		PID_Init(&Current_Id_PID, PID_DELTA, 1.5f, 0.3f, 0.00f, 0.0f, 0.0f, 20.0f, 0.2f, 0.1f, 0.1f, 0.1f);
+		PID_Init(&Current_Iq_PID, PID_DELTA, 1.5f, 0.2f, 0.00f, 0.0f, 0.0f, 5.8f, 0.2f, 0.1f, 0.1f, 0.1f);
+		PID_Init(&Position_Comm_PID, PID_DELTA, 0.0f, 0.002f, 0.0f, 0.0f, 0.0f, 100.0f, 0.01f, 0.1f, 0.1f, 0.1f);
+		PID_Init(&Position_PID, PID_POSITION, 2.0f, 0.0008f, 0.003f, 0.0f, 0.0f, 500.0f, 0.9f, 0.1f, 0.1f, 0.1f);
+		#elif WHO_AM_I == Slave2_Jaw_ID
+		PID_Init(&Current_Id_PID, PID_DELTA, 1.5f, 0.3f, 0.00f, 0.0f, 0.0f, 20.0f, 0.2f, 0.1f, 0.1f, 0.1f);
+		PID_Init(&Current_Iq_PID, PID_DELTA, 1.5f, 0.2f, 0.00f, 0.0f, 0.0f, 5.8f, 0.2f, 0.1f, 0.1f, 0.1f);
+		PID_Init(&Position_Comm_PID, PID_DELTA, 0.0f, 0.002f, 0.0f, 0.0f, 0.0f, 100.0f, 0.01f, 0.1f, 0.1f, 0.1f);
+		PID_Init(&Position_PID, PID_POSITION, 2.0f, 0.0008f, 0.003f, 0.0f, 0.0f, 500.0f, 0.9f, 0.1f, 0.1f, 0.1f);
+		#elif WHO_AM_I == Slave3_Jaw_ID
+		PID_Init(&Current_Id_PID, PID_DELTA, 1.5f, 0.3f, 0.00f, 0.0f, 0.0f, 20.0f, 0.2f, 0.1f, 0.1f, 0.1f);
+		PID_Init(&Current_Iq_PID, PID_DELTA, 1.5f, 0.2f, 0.00f, 0.0f, 0.0f, 5.8f, 0.2f, 0.1f, 0.1f, 0.1f);
+		PID_Init(&Position_Comm_PID, PID_DELTA, 0.0f, 0.002f, 0.0f, 0.0f, 0.0f, 100.0f, 0.01f, 0.1f, 0.1f, 0.1f);
+		PID_Init(&Position_PID, PID_POSITION, 2.0f, 0.0008f, 0.003f, 0.0f, 0.0f, 500.0f, 0.9f, 0.1f, 0.1f, 0.1f);
 		#endif
 	#endif
 }
@@ -317,24 +347,30 @@ void FOC_Main_Loop_H_Freq(void)
     CALC_SVPWM(Motor_FOC.Valpha, Motor_FOC.Vbeta);
 		
 //---------Running_Frec_Calc----------//
-	if (Motor_Run.state_led_flag == 10000)
+	if (Motor_Run.state_led_flag >= 10000 && Motor_FOC.Motor_Output_Mode == FOC_Running_Mode)
 	{
 		Motor_Run.state_led_flag = 0;
 		HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
 	}
-	if ((Motor_Run.state_led_flag & 0x07) == 0)
+    else if(Motor_Run.state_led_flag >= 2000 && Motor_FOC.Motor_Output_Mode == FOC_Shutdown_Mode && Motor_Error.SAFETY_STATE == 1)
     {
-		Adc_Val_Decode();
-		Get_ADC_Value();
-		Motor_Run.Adc_flag++;
-	}
+        Motor_Run.state_led_flag = 0;
+		HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
+    }
+    else if(Motor_Run.state_led_flag >= 500  && Motor_FOC.Motor_Output_Mode == FOC_Shutdown_Mode && Motor_Error.SAFETY_STATE == 0)
+    {
+        Motor_Run.state_led_flag = 0;
+        HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
+    }
 
 	Motor_Run.state_led_flag++;
 	Motor_Run.run_flag++;
 }
 
 void FOC_Main_Loop_L_Freq(void)
-{		
+{	
+    Motor_FOC.Motor_Output_Mode = (Motor_Comm.FOC_Comm_Shutdown & Motor_Comm.FOC_Comm_Status & Motor_Error.SAFETY_STATE) ? FOC_Running_Mode : FOC_Shutdown_Mode;
+
 	Encoder_Read_Reg(&MT6825_spi);
 	Motor_FOC.Theta = Position_Polar * FOC_Theta_Calc(Encoder_SPI_Get_Angle(&MT6825_spi));//单位：rad
 	
@@ -346,12 +382,11 @@ void FOC_Main_Loop_L_Freq(void)
         PID_SetFdb(&Position_PID, Motor_FOC.Theta);//rad
         PID_SetRef(&Position_PID, Motor_FOC.Theta_Ref);//rad
         PID_Calc(&Position_PID);
-        // Motor_FOC.Iq_Damping = Motor_FOC.K_Damping * Encoder_SPI_Get_Angular_Acc(&MT6825_spi);
+        // Motor_FOC.Iq_Damping = Motor_FOC.K_Damping * Encoder_SPI_Get_Angular_Acc(&MT6825_spi); //电流阻尼
 		if(Position_PID.pid_mode == PID_POSITION)
 		{
-			// Motor_FOC.Iq_ref = -PID_GetOutput(&Position_PID) - Motor_FOC.Iq_Damping;
-            Motor_FOC.Iq_ref = -PID_GetOutput(&Position_PID);
+			// Motor_FOC.Iq_ref = PID_GetOutput(&Position_PID) - Motor_FOC.Iq_Damping;
+            Motor_FOC.Iq_ref = PID_GetOutput(&Position_PID);
 		}
     }
 }
-

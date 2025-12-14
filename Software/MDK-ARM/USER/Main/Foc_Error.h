@@ -1,7 +1,7 @@
 /*
  * @Date: 2025-02-27 19:16:35
  * @LastEditors: ZHUOZHUOO
- * @LastEditTime: 2025-11-13 16:58:29
+ * @LastEditTime: 2025-11-13 22:37:56
  * @FilePath: \Software\MDK-ARM\USER\Main\Foc_Error.h
  * @Description: Do not edit
  */
@@ -10,17 +10,17 @@
 
 #include "stm32g4xx_hal.h"
 #include "Foc_Control.h"
+#include "FOC_Comm.h"
 
-#define VOLTAGE_MAX MOTOR_VOLTAGE + 4//V
-#define VOLTAGE_MIN MOTOR_VOLTAGE / 2 //V
-#define TEMPERATURE_MAX 1.2f //V 对应NTC温度值
+#define VOLTAGE_MAX (MOTOR_VOLTAGE + 4) //V
+#define VOLTAGE_MIN (MOTOR_VOLTAGE - 8) //V
+#define TEMPERATURE_MAX 1.50f //V 对应NTC温度值
 
 typedef struct
 {
     uint8_t SAFETY_STATE_WINDOW;
     uint8_t OVER_VOLTAGE_STATE_WINDOW;
     uint8_t UNDER_VOLTAGE_STATE_WINDOW;
-    uint8_t OVER_CURRENT_STATE_WINDOW;
     uint8_t OVER_TEMPERATURE_STATE_WINDOW;
     uint8_t DRV8323_Error_State_Window;
 }Error_State_Window;
@@ -31,7 +31,6 @@ typedef struct
     uint8_t SAFETY_STATE;           //0:Safety expired  1:Normal
     uint8_t OVER_VOLTAGE_STATE;     //0:OverVoltage     1:Normal
     uint8_t UNDER_VOLTAGE_STATE;    //0:UnderVoltage    1:Normal
-    uint8_t OVER_CURRENT_STATE;     //0:OverCurrent     1:Normal
     uint8_t OVER_TEMPERATURE_STATE; //0:OverTemperature 1:Normal
     uint8_t DRV8323_ERROR_STATE;    //0:DRV8323 Error   1:Normal
     Error_State_Window STATE_WINDOW;
