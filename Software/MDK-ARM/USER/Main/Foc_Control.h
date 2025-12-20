@@ -16,6 +16,7 @@
 #include "Foc_Comm.h"
 #include "Init_music.h"
 #include "util_adc.h"
+#include "lib_filter.h"
 
 
 #define MY_PI           (float)3.1415926535898
@@ -57,10 +58,14 @@ typedef struct
     float Ialpha;
     float Ibeta;
     float Iamp;//电流幅值
-    float Id;
-    float Id_ref;
-    float Iq;
-	float Iq_ref;
+	
+    float Id;//D轴电流_反馈
+    float Id_ref;//D轴电流_期望
+	Filter_Lowpass_TypeDef Id_LPF;//D轴电流低通滤波器
+    float Iq;//Q轴电流_反馈
+	float Iq_ref;//Q轴电流_期望
+    Filter_Lowpass_TypeDef Iq_LPF;//Q轴电流低通滤波器
+	
     float Vd;//D轴电压_期望
     float Vq;//Q轴电压_期望
     float Valpha;
@@ -75,6 +80,8 @@ typedef struct
     float Theta;//机械角度_反馈
     float Theta_Ref;//机械角度_期望
     float Theta_Exp_Comm;//机械角度_期望_通讯
+    Filter_Lowpass_TypeDef Theta_Ref_LPF;//机械角度期望低通滤波器
+
     float ElecTheta;//电角度_反馈
 	float ElecTheta_Offset;
 
@@ -104,7 +111,6 @@ extern FOC_Running_Struct Motor_Run;
 
 extern PID_TypeDef Current_Id_PID;
 extern PID_TypeDef Current_Iq_PID;
-extern PID_TypeDef Position_Comm_PID;
 extern PID_TypeDef Position_PID;
 
 void FOC_Struct_Init(FOC_Struct *foc);

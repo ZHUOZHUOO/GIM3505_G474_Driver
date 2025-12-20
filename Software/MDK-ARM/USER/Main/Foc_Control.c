@@ -1,7 +1,7 @@
 /*
  * @Date: 2025-02-26 18:25:59
  * @LastEditors: ZHUOZHUOO
- * @LastEditTime: 2025-11-23 19:35:02
+ * @LastEditTime: 2025-12-17 19:09:14
  * @FilePath: \Software\MDK-ARM\USER\Main\Foc_Control.c
  * @Description: Do not edit
  */
@@ -18,7 +18,6 @@ FOC_Running_Struct Motor_Run = {0, 0, 0, 0, 0};
 
 PID_TypeDef Current_Id_PID;
 PID_TypeDef Current_Iq_PID;
-PID_TypeDef Position_Comm_PID;
 PID_TypeDef Position_PID;
 
 //===========Elec_Theta_Zero_Point==========//
@@ -29,7 +28,7 @@ PID_TypeDef Position_PID;
 	#define Elec_Theta_Zero_Point 2.64f
     #define K_Damping_Default 0.0001f
 #elif WHO_AM_I == Slave_Test_ID
-	#define Elec_Theta_Zero_Point 2.4f
+	#define Elec_Theta_Zero_Point 5.54f
     #define K_Damping_Default 0.00001f
 #elif WHO_AM_I == Slave0_Jaw_ID
 	#define Elec_Theta_Zero_Point 5.54f
@@ -212,37 +211,30 @@ void FOC_PID_Init(void)
 		#if WHO_AM_I == Slave_Upper_Arm_ID
 		PID_Init(&Current_Id_PID, PID_DELTA, 1.5f, 0.3f, 0.00f, 0.0f, 0.0f, 20.0f, 0.2f, 0.1f, 0.1f, 0.1f);
 		PID_Init(&Current_Iq_PID, PID_DELTA, 1.5f, 0.2f, 0.00f, 0.0f, 0.0f, 5.8f, 0.2f, 0.1f, 0.1f, 0.1f);
-		PID_Init(&Position_Comm_PID, PID_DELTA, 0.0f, 0.002f, 0.0f, 0.0f, 0.0f, 100.0f, 0.01f, 0.1f, 0.1f, 0.1f);
 		PID_Init(&Position_PID, PID_POSITION, 2.0f, 0.0008f, 0.003f, 0.0f, 0.0f, 500.0f, 0.9f, 0.1f, 0.1f, 0.1f);
 		#elif WHO_AM_I == Slave_Fore_Arm_ID
 		PID_Init(&Current_Id_PID, PID_DELTA, 1.5f, 0.3f, 0.00f, 0.0f, 0.0f, 20.0f, 0.2f, 0.1f, 0.1f, 0.1f);
 		PID_Init(&Current_Iq_PID, PID_DELTA, 1.5f, 0.2f, 0.00f, 0.0f, 0.0f, 5.8f, 0.2f, 0.1f, 0.1f, 0.1f);
-		PID_Init(&Position_Comm_PID, PID_DELTA, 0.0f, 0.002f, 0.0f, 0.0f, 0.0f, 100.0f, 0.01f, 0.1f, 0.1f, 0.1f);
 		PID_Init(&Position_PID, PID_POSITION, 1.2f, 0.0005f, 0.003f, 0.0f, 0.0f, 500.0f, 0.9f, 0.1f, 0.1f, 0.1f);
 		#elif WHO_AM_I == Slave_Test_ID
-		PID_Init(&Current_Id_PID, PID_DELTA, 1.5f, 0.3f, 0.00f, 0.0f, 0.0f, 20.0f, 0.2f, 0.1f, 0.1f, 0.1f);
-		PID_Init(&Current_Iq_PID, PID_DELTA, 1.5f, 0.2f, 0.00f, 0.0f, 0.0f, 5.8f, 0.2f, 0.1f, 0.1f, 0.1f);
-		PID_Init(&Position_Comm_PID, PID_DELTA, 0.0f, 0.002f, 0.0f, 0.0f, 0.0f, 100.0f, 0.01f, 0.1f, 0.1f, 0.1f);
-		PID_Init(&Position_PID, PID_POSITION, 2.0f, 0.0008f, 0.003f, 0.0f, 0.0f, 500.0f, 0.9f, 0.1f, 0.1f, 0.1f);
+		PID_Init(&Current_Id_PID, PID_DELTA, 60.0f, 1.0f, 0.00f, 0.0f, 0.0f, 2.0f, 0.02f, 0.1f, 0.1f, 0.1f);
+		PID_Init(&Current_Iq_PID, PID_DELTA, 10.0f, 0.5f, 0.00f, 0.0f, 0.0f, 0.8f, 0.02f, 0.1f, 0.1f, 0.1f);
+		PID_Init(&Position_PID, PID_POSITION, 1.2f, 0.0005f, 0.003f, 0.0f, 0.0f, 500.0f, 0.9f, 0.1f, 0.1f, 0.1f);
 		#elif WHO_AM_I == Slave0_Jaw_ID
 		PID_Init(&Current_Id_PID, PID_DELTA, 1.5f, 0.3f, 0.00f, 0.0f, 0.0f, 20.0f, 0.2f, 0.1f, 0.1f, 0.1f);
 		PID_Init(&Current_Iq_PID, PID_DELTA, 1.5f, 0.2f, 0.00f, 0.0f, 0.0f, 5.8f, 0.2f, 0.1f, 0.1f, 0.1f);
-		PID_Init(&Position_Comm_PID, PID_DELTA, 0.0f, 0.002f, 0.0f, 0.0f, 0.0f, 100.0f, 0.01f, 0.1f, 0.1f, 0.1f);
 		PID_Init(&Position_PID, PID_POSITION, 2.0f, 0.0008f, 0.003f, 0.0f, 0.0f, 500.0f, 0.9f, 0.1f, 0.1f, 0.1f);
 		#elif WHO_AM_I == Slave1_Jaw_ID
 		PID_Init(&Current_Id_PID, PID_DELTA, 1.5f, 0.3f, 0.00f, 0.0f, 0.0f, 20.0f, 0.2f, 0.1f, 0.1f, 0.1f);
 		PID_Init(&Current_Iq_PID, PID_DELTA, 1.5f, 0.2f, 0.00f, 0.0f, 0.0f, 5.8f, 0.2f, 0.1f, 0.1f, 0.1f);
-		PID_Init(&Position_Comm_PID, PID_DELTA, 0.0f, 0.002f, 0.0f, 0.0f, 0.0f, 100.0f, 0.01f, 0.1f, 0.1f, 0.1f);
 		PID_Init(&Position_PID, PID_POSITION, 2.0f, 0.0008f, 0.003f, 0.0f, 0.0f, 500.0f, 0.9f, 0.1f, 0.1f, 0.1f);
 		#elif WHO_AM_I == Slave2_Jaw_ID
 		PID_Init(&Current_Id_PID, PID_DELTA, 1.5f, 0.3f, 0.00f, 0.0f, 0.0f, 20.0f, 0.2f, 0.1f, 0.1f, 0.1f);
 		PID_Init(&Current_Iq_PID, PID_DELTA, 1.5f, 0.2f, 0.00f, 0.0f, 0.0f, 5.8f, 0.2f, 0.1f, 0.1f, 0.1f);
-		PID_Init(&Position_Comm_PID, PID_DELTA, 0.0f, 0.002f, 0.0f, 0.0f, 0.0f, 100.0f, 0.01f, 0.1f, 0.1f, 0.1f);
 		PID_Init(&Position_PID, PID_POSITION, 2.0f, 0.0008f, 0.003f, 0.0f, 0.0f, 500.0f, 0.9f, 0.1f, 0.1f, 0.1f);
 		#elif WHO_AM_I == Slave3_Jaw_ID
 		PID_Init(&Current_Id_PID, PID_DELTA, 1.5f, 0.3f, 0.00f, 0.0f, 0.0f, 20.0f, 0.2f, 0.1f, 0.1f, 0.1f);
 		PID_Init(&Current_Iq_PID, PID_DELTA, 1.5f, 0.2f, 0.00f, 0.0f, 0.0f, 5.8f, 0.2f, 0.1f, 0.1f, 0.1f);
-		PID_Init(&Position_Comm_PID, PID_DELTA, 0.0f, 0.002f, 0.0f, 0.0f, 0.0f, 100.0f, 0.01f, 0.1f, 0.1f, 0.1f);
 		PID_Init(&Position_PID, PID_POSITION, 2.0f, 0.0008f, 0.003f, 0.0f, 0.0f, 500.0f, 0.9f, 0.1f, 0.1f, 0.1f);
 		#endif
 	#endif
@@ -265,6 +257,9 @@ void FOC_Main_Init(void)
 	Adc_Init();
 	DRV8323_Init();
 	FOC_PID_Init();
+    Filter_Lowpass_Init(0.03f, &Motor_FOC.Id_LPF);
+	Filter_Lowpass_Init(0.03f, &Motor_FOC.Iq_LPF);
+    Filter_Lowpass_Init(0.005f, &Motor_FOC.Theta_Ref_LPF);
 	CALC_SVPWM_Init();
 
 	HAL_TIM_Base_Start (&htim1);
@@ -322,11 +317,12 @@ void FOC_Main_Loop_H_Freq(void)
     Park_transform(Motor_FOC.Ialpha, Motor_FOC.Ibeta, &Motor_FOC.Id, &Motor_FOC.Iq, Motor_FOC.ElecTheta);
 
 //----------Vd_Vq_Calc----------//
-    PID_SetFdb(&Current_Id_PID, Motor_FOC.Id);
+	
+    PID_SetFdb(&Current_Id_PID, Filter_Lowpass(Motor_FOC.Id, &Motor_FOC.Id_LPF));
     PID_SetRef(&Current_Id_PID, Motor_FOC.Id_ref);
     Motor_FOC.Vd += PID_Calc(&Current_Id_PID);
 
-    PID_SetFdb(&Current_Iq_PID, Motor_FOC.Iq);
+    PID_SetFdb(&Current_Iq_PID, Filter_Lowpass(Motor_FOC.Iq, &Motor_FOC.Iq_LPF));
     PID_SetRef(&Current_Iq_PID, Motor_FOC.Iq_ref);
     Motor_FOC.Vq += PID_Calc(&Current_Iq_PID);
 
@@ -375,10 +371,7 @@ void FOC_Main_Loop_L_Freq(void)
 	Motor_FOC.Theta = Position_Polar * FOC_Theta_Calc(Encoder_SPI_Get_Angle(&MT6825_spi));//单位：rad
 	
 	if(Motor_FOC.Motor_Close_Loop_Mode == Position_Mode){
-        PID_SetFdb(&Position_Comm_PID, Motor_FOC.Theta_Ref);
-        PID_SetRef(&Position_Comm_PID, Motor_FOC.Theta_Exp_Comm);
-        PID_Calc(&Position_Comm_PID);
-        Motor_FOC.Theta_Ref = Motor_FOC.Theta_Ref + Position_Comm_PID.output;
+        Motor_FOC.Theta_Ref = Filter_Lowpass(Motor_FOC.Theta_Exp_Comm, &Motor_FOC.Theta_Ref_LPF);
         PID_SetFdb(&Position_PID, Motor_FOC.Theta);//rad
         PID_SetRef(&Position_PID, Motor_FOC.Theta_Ref);//rad
         PID_Calc(&Position_PID);

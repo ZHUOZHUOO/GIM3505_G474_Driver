@@ -9,7 +9,7 @@
 #define __CONFIGURE_H
 
 //-----------FDCAN ID Setting------------//
-#define WHO_AM_I Slave3_Jaw_ID
+#define WHO_AM_I Slave_Test_ID
 
 #define Tx_Master_ID 	WHO_AM_I | 0x100
 #define Rx_Master_ID 	WHO_AM_I
@@ -17,7 +17,7 @@
 #define Master_ID 			0x410
 #define Slave_Upper_Arm_ID 	0x420
 #define Slave_Fore_Arm_ID 	0x430
-#define Slave_Test_ID 		0x440
+#define Slave_Test_ID 		0x450
 #define Slave0_Jaw_ID 	    0x450
 #define Slave1_Jaw_ID 	    0x460
 #define Slave2_Jaw_ID 	    0x470
