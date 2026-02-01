@@ -22,14 +22,14 @@ PID_TypeDef Position_PID;
 
 //===========Elec_Theta_Zero_Point==========//
 #if WHO_AM_I == Slave_Upper_Arm_ID
-	#define Elec_Theta_Zero_Point 1.0f
-    #define K_Damping_Default 0.0001f
+	#define Elec_Theta_Zero_Point 2.40f
+    #define K_Damping_Default 0.00001f
 #elif WHO_AM_I == Slave_Fore_Arm_ID
-	#define Elec_Theta_Zero_Point 2.64f
+	#define Elec_Theta_Zero_Point 2.83f
     #define K_Damping_Default 0.0001f
 #elif WHO_AM_I == Slave_Test_ID
-	#define Elec_Theta_Zero_Point 5.54f
-    #define K_Damping_Default 0.00001f
+	#define Elec_Theta_Zero_Point 4.14f
+    #define K_Damping_Default 0.0001f
 #elif WHO_AM_I == Slave0_Jaw_ID
 	#define Elec_Theta_Zero_Point 5.54f
     #define K_Damping_Default 0.00001f
