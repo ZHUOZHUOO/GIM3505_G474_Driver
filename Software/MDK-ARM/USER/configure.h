@@ -1,8 +1,8 @@
 /*
  * @Date: 2025-03-09 20:13:14
  * @LastEditors: ZHUOZHUOO
- * @LastEditTime: 2025-11-19 19:38:46
- * @FilePath: \Software\MDK-ARM\USER\configure.h
+ * @LastEditTime: 2026-03-22 15:37:22
+ * @FilePath: \SoftwareV2\MDK-ARM\USER\configure.h
  * @Description: Do not edit
  */
 #ifndef __CONFIGURE_H
@@ -14,27 +14,26 @@
 #define Tx_Master_ID 	WHO_AM_I | 0x100
 #define Rx_Master_ID 	WHO_AM_I
 
-#define Master_ID 			0x410
+#define Slave_Base_Yaw_ID 	0x410
 #define Slave_Upper_Arm_ID 	0x420
 #define Slave_Fore_Arm_ID 	0x430
-#define Slave_Test_ID 		0x420
-#define Slave0_Jaw_ID 	    0x450
-#define Slave1_Jaw_ID 	    0x460
-#define Slave2_Jaw_ID 	    0x470
-#define Slave3_Jaw_ID 	    0x480
+#define Slave0_Jaw_ID 	    0x450 	//21
+#define Slave1_Jaw_ID 	    0x460	//11
+#define Slave2_Jaw_ID 	    0x470	//12
+#define Slave3_Jaw_ID 	    0x480	//22
 
 
 //-----------Mode Setting--------------//
 
 //闭环模式
-#define FOC_CLOSE_LOOP_MODE MODE_POSITION
+#define FOC_CLOSE_LOOP_MODE MODE_FORCE
 //零点校准模式
 #define ZERO_POINT_MODE MODE_OFF
 //ADC电压校准模式
 #define ADC_VREF_MODE MODE_OFF
 //滤波模式, Sliding Window Filter
 #define ADC_FILTER_MODE MODE_ON
-#define SLIDING_WINDOW_SIZE 8
+#define SLIDING_WINDOW_SIZE 4
 //错误处理模式
 #define ERROR_MODE MODE_OFF
 //磁编码器角度滤波窗口宽度
@@ -65,27 +64,52 @@
 #define ICx_FILTER 8
 
 //---------Motor Parameter Define---------//
-#define MOTOR_POLE_PAIRS 	11 			//电机极对数
-#define MOTOR_VOLTAGE 		24 			//电机电压
-#define MOTOR_RESISTANCE 	5.06 		//电机电阻
-#define MOTOR_INDUCTANCE 	0.00062 	//电机电感
-#define MOTOR_SPEED_MAX  	384			//电机最大速度(空载)
-#define MOTOR_CURRENT_MAX 	2.4 		//电机最大电流
-#define SPEED_CONSTANT 		16 			//转速常数Kn
-#define TORQUE_CONSTANT 	0.52 		//转矩常数KT
+#define MOTOR_MODEL          GIM4310     //电机型号
+
+#define GIM3505 1
+#define GIM4305 2
+#define GIM4310 3
+
+#if MOTOR_MODEL == GIM3505
+#define MOTOR_POLE_PAIRS 	(float)11.0f 			//电机极对数
+#define MOTOR_VOLTAGE 		(float)24.0f 			//电机电压
+#define MOTOR_RESISTANCE 	(float)5.06f 		    //电机电阻
+#define MOTOR_INDUCTANCE 	(float)0.00062f 	    //电机电感
+#define MOTOR_SPEED_MAX  	(float)384			    //电机最大速度(空载)
+#define MOTOR_CURRENT_MAX 	(float)2.4f 		    //电机最大电流
+#define SPEED_CONSTANT 		(float)16.0f 		    //转速常数Kn
+#define TORQUE_CONSTANT 	(float)0.52f 		    //转矩常数KT
+#endif
+
+#if MOTOR_MODEL == GIM4305
+#define MOTOR_POLE_PAIRS 	(float)14.0f 			//电机极对数
+#define MOTOR_VOLTAGE 		(float)24.0f 			//电机电压
+#define MOTOR_RESISTANCE 	(float)0.638f 		    //电机电阻
+#define MOTOR_INDUCTANCE 	(float)0.000169f 	    //电机电感
+#define MOTOR_SPEED_MAX  	(float)540			    //电机最大速度(空载)
+#define MOTOR_CURRENT_MAX 	(float)3.0f 		    //电机最大电流
+#define SPEED_CONSTANT 		(float)15.4f 		    //转速常数Kn
+#define TORQUE_CONSTANT 	(float)0.21f 		    //转矩常数KT
+#endif
+
+#if MOTOR_MODEL == GIM4310
+#define MOTOR_POLE_PAIRS 	(float)14.0f 			//电机极对数
+#define MOTOR_VOLTAGE 		(float)24.0f 			//电机电压
+#define MOTOR_RESISTANCE 	(float)1.046f 		    //电机电阻
+#define MOTOR_INDUCTANCE 	(float)0.000344f 	    //电机电感
+#define MOTOR_SPEED_MAX  	(float)100			    //电机最大速度(空载)
+#define MOTOR_CURRENT_MAX 	(float)8.0f 		    //电机最大电流
+#define SPEED_CONSTANT 		(float)9.25f 		    //转速常数Kn
+#define TORQUE_CONSTANT 	(float)0.66f 		    //转矩常数KT
+#endif
 
 //---------Encoder Parameter Define---------//
-#define MOTOR_ENCODER_DIR 	1 //电机编码器方向
-#define MOTOR_ENCODER_LINES 262144.0f //电机编码器线数 18bits
-#define THREE_PHASE_LINE_SEQUENCCE A_C_B
-#define MAX_IQ 2.0f
-#define MAX_VQ 12.0f
-#define MAX_VD 10.0f
+#define MOTOR_ENCODER_DIR 	(float)1.0f            //电机编码器方向，与编码器安装方向有关
+#define MOTOR_ENCODER_LINES (float)262144.0f        //电机编码器线数 18bits
+#define MAX_IQ (float)2.0f
+#define MAX_VQ (float)12.0f
+#define MAX_VD (float)10.0f
 
-#define MAX_VQVQ_VDVD 144.0f
-
-//--------Three phase line sequence Define-------//
-#define A_B_C  1
-#define A_C_B -1
+#define MAX_VQVQ_VDVD (float)144.0f
 
 #endif

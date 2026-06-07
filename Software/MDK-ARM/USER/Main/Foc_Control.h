@@ -88,9 +88,6 @@ typedef struct
     float Speed_Rpm;//速度反馈
     float Speed_Rpm_Ref;//期望速度
 
-    float Iq_Damping;//电流阻尼值
-    float K_Damping;//阻尼系数
-
     Close_Loop_Mode_t Motor_Close_Loop_Mode;
     FOC_Output_Mode_t Motor_Output_Mode;
 } FOC_Struct;

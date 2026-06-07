@@ -1,8 +1,8 @@
 /*
  * @Date: 2025-02-26 18:25:59
  * @LastEditors: ZHUOZHUOO
- * @LastEditTime: 2025-12-17 19:09:14
- * @FilePath: \Software\MDK-ARM\USER\Main\Foc_Control.c
+ * @LastEditTime: 2026-03-22 16:11:16
+ * @FilePath: \SoftwareV2\MDK-ARM\USER\Main\Foc_Control.c
  * @Description: Do not edit
  */
 
@@ -21,28 +21,53 @@ PID_TypeDef Current_Iq_PID;
 PID_TypeDef Position_PID;
 
 //===========Elec_Theta_Zero_Point==========//
-#if WHO_AM_I == Slave_Upper_Arm_ID
-	#define Elec_Theta_Zero_Point 2.40f
-    #define K_Damping_Default 0.00001f
-#elif WHO_AM_I == Slave_Fore_Arm_ID
-	#define Elec_Theta_Zero_Point 2.83f
-    #define K_Damping_Default 0.0001f
-#elif WHO_AM_I == Slave_Test_ID
-	#define Elec_Theta_Zero_Point 4.14f
-    #define K_Damping_Default 0.0001f
-#elif WHO_AM_I == Slave0_Jaw_ID
-	#define Elec_Theta_Zero_Point 5.54f
-    #define K_Damping_Default 0.00001f
-#elif WHO_AM_I == Slave1_Jaw_ID
-	#define Elec_Theta_Zero_Point 3.0f
-    #define K_Damping_Default 0.00001f
-#elif WHO_AM_I == Slave2_Jaw_ID
-	#define Elec_Theta_Zero_Point 4.14f
-    #define K_Damping_Default 0.00001f
-#elif WHO_AM_I == Slave3_Jaw_ID
-	#define Elec_Theta_Zero_Point 5.14f
-    #define K_Damping_Default 0.00001f
+#if MOTOR_MODEL == GIM3505
+    #if WHO_AM_I == Slave_Upper_Arm_ID
+        #define Elec_Theta_Zero_Point 		(float)2.40f
+        #define ELEC_THETA_POLAR 			(float)1.0f
+		#define THREE_PHASE_LINE_SEQUENCCE 	A_C_B
+    #elif WHO_AM_I == Slave_Fore_Arm_ID
+        #define Elec_Theta_Zero_Point 		(float)2.83f
+        #define ELEC_THETA_POLAR 			(float)1.0f
+		#define THREE_PHASE_LINE_SEQUENCCE 	A_C_B
+    #elif WHO_AM_I == Slave_Base_Yaw_ID
+        #define Elec_Theta_Zero_Point 		(float)2.13f
+        #define ELEC_THETA_POLAR 			(float)-1.0f 
+		#define THREE_PHASE_LINE_SEQUENCCE 	A_B_C
+    #elif WHO_AM_I == Slave0_Jaw_ID
+        #define Elec_Theta_Zero_Point 		(float)4.95f
+        #define ELEC_THETA_POLAR 			(float)-1.0f
+		#define THREE_PHASE_LINE_SEQUENCCE 	A_B_C
+    #elif WHO_AM_I == Slave1_Jaw_ID
+        #define Elec_Theta_Zero_Point 		(float)2.0f
+        #define ELEC_THETA_POLAR 			(float)-1.0f
+		#define THREE_PHASE_LINE_SEQUENCCE 	A_B_C
+    #elif WHO_AM_I == Slave2_Jaw_ID
+        #define Elec_Theta_Zero_Point 		(float)2.96f
+        #define ELEC_THETA_POLAR 			(float)-1.0f
+		#define THREE_PHASE_LINE_SEQUENCCE 	A_B_C
+    #elif WHO_AM_I == Slave3_Jaw_ID
+        #define Elec_Theta_Zero_Point 		(float)1.75f
+        #define ELEC_THETA_POLAR 			(float)-1.0f
+		#define THREE_PHASE_LINE_SEQUENCCE 	A_B_C
+    #endif
+#elif MOTOR_MODEL == GIM4305
+    #if WHO_AM_I == Slave_Fore_Arm_ID
+        #define Elec_Theta_Zero_Point 		(float)5.19f
+        #define ELEC_THETA_POLAR 			(float)1.0f
+		#define THREE_PHASE_LINE_SEQUENCCE 	A_B_C
+    #endif
+#elif MOTOR_MODEL == GIM4310
+    #if WHO_AM_I == Slave_Upper_Arm_ID
+        #define Elec_Theta_Zero_Point 		(float)2.8f
+        #define ELEC_THETA_POLAR 			(float)-1.0f
+		#define THREE_PHASE_LINE_SEQUENCCE 	A_B_C
+    #endif
 #endif
+
+//--------Three phase line sequence Define-------//
+#define A_B_C  1
+#define A_C_B -1
 
 #define Position_Polar (MOTOR_ENCODER_DIR)
 
@@ -155,11 +180,19 @@ void Inv_Park_transform(float Id, float Iq, float *Ialpha, float *Ibeta, float T
     *Ibeta = Id * arm_sin_f32(Theta) + Iq * arm_cos_f32(Theta);
 }
 
+#define INV_360            (0.0027777778f)                          // 1/360.0f
+#define DEG_TO_RAD_FACTOR  (ELEC_THETA_POLAR * TWO_PI * INV_360)    // TWO_PI / 360.0f
+
 float FOC_ElecTheta_Calc(float Theta)
 {
-    float electrode_angle;
-    electrode_angle = ((int32_t)(MOTOR_POLE_PAIRS * (Theta + 360))% 360) / 360.0f * TWO_PI - Motor_FOC.ElecTheta_Offset;
-    return electrode_angle;//rad
+    float elec_deg = MOTOR_POLE_PAIRS * Theta;
+
+    elec_deg -= 360.0f * (float)((int32_t)(elec_deg * INV_360));
+    if (elec_deg < 0.0f) elec_deg += 360.0f;
+
+    float electrode_angle = (elec_deg * DEG_TO_RAD_FACTOR) - Motor_FOC.ElecTheta_Offset;
+    
+    return electrode_angle;
 }
 
 float FOC_Theta_Calc(float Theta)
@@ -197,18 +230,19 @@ void FOC_Struct_Init(FOC_Struct *foc)
     foc->hTimePhB = 0;
     foc->hTimePhC = 0;
 
-    foc->Iq_Damping = 0.0f;
-    foc->K_Damping = K_Damping_Default;
-
     foc->Motor_Close_Loop_Mode = (Close_Loop_Mode_t) FOC_CLOSE_LOOP_MODE;
     foc->Motor_Output_Mode = (FOC_Output_Mode_t) FOC_Shutdown_Mode;
 }
 
 void FOC_PID_Init(void)
 {
-	//===========HT4315==========//
-	#if MOTOR_TYPE == HT4315
-		#if WHO_AM_I == Slave_Upper_Arm_ID
+	//===========GIM3505==========//
+	#if MOTOR_MODEL == GIM3505
+		#if WHO_AM_I == Slave_Base_Yaw_ID
+		PID_Init(&Current_Id_PID, PID_DELTA, 1.5f, 0.3f, 0.00f, 0.0f, 0.0f, 20.0f, 0.2f, 0.1f, 0.1f, 0.1f);
+		PID_Init(&Current_Iq_PID, PID_DELTA, 1.5f, 0.2f, 0.00f, 0.0f, 0.0f, 5.8f, 0.2f, 0.1f, 0.1f, 0.1f);
+		PID_Init(&Position_PID, PID_POSITION, 2.0f, 0.0008f, 0.003f, 0.0f, 0.0f, 500.0f, 0.9f, 0.1f, 0.1f, 0.1f);
+		#elif WHO_AM_I == Slave_Upper_Arm_ID
 		PID_Init(&Current_Id_PID, PID_DELTA, 1.5f, 0.3f, 0.00f, 0.0f, 0.0f, 20.0f, 0.2f, 0.1f, 0.1f, 0.1f);
 		PID_Init(&Current_Iq_PID, PID_DELTA, 1.5f, 0.2f, 0.00f, 0.0f, 0.0f, 5.8f, 0.2f, 0.1f, 0.1f, 0.1f);
 		PID_Init(&Position_PID, PID_POSITION, 2.0f, 0.0008f, 0.003f, 0.0f, 0.0f, 500.0f, 0.9f, 0.1f, 0.1f, 0.1f);
@@ -237,7 +271,22 @@ void FOC_PID_Init(void)
 		PID_Init(&Current_Iq_PID, PID_DELTA, 1.5f, 0.2f, 0.00f, 0.0f, 0.0f, 5.8f, 0.2f, 0.1f, 0.1f, 0.1f);
 		PID_Init(&Position_PID, PID_POSITION, 2.0f, 0.0008f, 0.003f, 0.0f, 0.0f, 500.0f, 0.9f, 0.1f, 0.1f, 0.1f);
 		#endif
-	#endif
+    //===========GIM4305==========//
+    #elif MOTOR_MODEL == GIM4305
+        #if WHO_AM_I == Slave_Fore_Arm_ID
+        PID_Init(&Current_Id_PID, PID_DELTA, 40.0f, 0.3f, 0.00f, 0.0f, 0.0f, 20.0f, 0.2f, 0.1f, 0.1f, 0.1f);
+        PID_Init(&Current_Iq_PID, PID_DELTA, 40.0f, 0.3f, 0.00f, 0.0f, 0.0f, 20.0f, 0.2f, 0.1f, 0.1f, 0.1f);
+        PID_Init(&Position_PID, PID_POSITION, 1.2f, 0.0005f, 0.003f, 0.0f, 0.0f, 500.0f, 0.9f, 0.1f, 0.1f, 0.1f);
+        #endif
+
+    //===========GIM4310==========//
+    #elif MOTOR_MODEL == GIM4310
+        #if WHO_AM_I == Slave_Upper_Arm_ID
+        PID_Init(&Current_Id_PID, PID_DELTA, 40.0f, 0.3f, 0.00f, 0.0f, 0.0f, 20.0f, 0.2f, 0.1f, 0.1f, 0.1f);
+        PID_Init(&Current_Iq_PID, PID_DELTA, 60.0f, 0.4f, 0.00f, 0.0f, 0.0f, 20.0f, 0.2f, 0.1f, 0.1f, 0.1f);
+        PID_Init(&Position_PID, PID_POSITION, 1.2f, 0.0005f, 0.003f, 0.0f, 0.0f, 500.0f, 0.9f, 0.1f, 0.1f, 0.1f);
+        #endif
+    #endif
 }
 
 //======================FOC main=======================//
@@ -365,7 +414,9 @@ void FOC_Main_Loop_H_Freq(void)
 
 void FOC_Main_Loop_L_Freq(void)
 {	
-    Motor_FOC.Motor_Output_Mode = (Motor_Comm.FOC_Comm_Shutdown & Motor_Comm.FOC_Comm_Status & Motor_Error.SAFETY_STATE) ? FOC_Running_Mode : FOC_Shutdown_Mode;
+	Motor_FOC.Motor_Output_Mode = (Motor_Comm.FOC_Comm_Shutdown & Motor_Comm.FOC_Comm_Status & Motor_Error.SAFETY_STATE) ? FOC_Running_Mode : FOC_Shutdown_Mode;
+//	Motor_Comm.FOC_Comm_Shutdown = FOC_Comm_Running;
+//	Motor_FOC.Motor_Output_Mode = FOC_Running_Mode;
 
 	Encoder_Read_Reg(&MT6825_spi);
 	Motor_FOC.Theta = Position_Polar * FOC_Theta_Calc(Encoder_SPI_Get_Angle(&MT6825_spi));//单位：rad
@@ -375,10 +426,8 @@ void FOC_Main_Loop_L_Freq(void)
         PID_SetFdb(&Position_PID, Motor_FOC.Theta);//rad
         PID_SetRef(&Position_PID, Motor_FOC.Theta_Ref);//rad
         PID_Calc(&Position_PID);
-        // Motor_FOC.Iq_Damping = Motor_FOC.K_Damping * Encoder_SPI_Get_Angular_Acc(&MT6825_spi); //电流阻尼
 		if(Position_PID.pid_mode == PID_POSITION)
 		{
-			// Motor_FOC.Iq_ref = PID_GetOutput(&Position_PID) - Motor_FOC.Iq_Damping;
             Motor_FOC.Iq_ref = PID_GetOutput(&Position_PID);
 		}
     }
